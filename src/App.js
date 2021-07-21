@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ApplyForm from './components/ApplyForm';
+import ApplySucess from './components/ApplySucess';
+import Home from './components/Home';
+import AllJob from './components/AllJob';
+import Internship from './components/Internship';
+import Contact from './components/Contact';
+import JobDetail from './components/JobDetail';
+import ScrollToTop from './components/ScrollToTop';
+import NotFound from './components/NotFound';
+import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+
+
 
 function App() {
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar></Navbar>
+      {/* <React.StrictMode> */}
+      <div className="content">
+        <ScrollToTop />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/allJob" component={AllJob} />
+          <Route exact path="/internship" component={Internship} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/job/:jobId" component={JobDetail} />
+
+          <Route exact path="/apply/:jobId" render={ (props) => <ApplyForm {...props} />} />
+          <Route exact path="/applySucess" component={ApplySucess} />
+          <Route path="/404" component={NotFound} />
+          <Redirect to="/404" />
+        </Switch>
+      </div>
+      {/* </React.StrictMode> */}
+      <Footer></Footer>
     </div>
+    </Router>
   );
 }
 

@@ -1,0 +1,14 @@
+.Detail {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 16rem;
+}
+
+.ParentDetail {
+  padding-top: 2rem;
+  background-color: #f0f0f0;
+}
+
+.SocialMediaList {
+  margin-bottom: 0.4rem;
+}

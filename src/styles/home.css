@@ -1,0 +1,29 @@
+.Life {
+  margin-top: 3rem;
+  margin-left: 5rem;
+}
+
+.LifeDetail {
+  align-items: center;
+  text-align: center;
+}
+
+Col {
+  margin: 5px;
+}
+
+/* .Why {
+  font-size: 128px;
+} */
+
+.Quote {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+  /* font-size: 18rem; */
+}
+
+.DetailCard {
+  background-color: #d4d4d4;
+  border-radius: 18px;
+}
