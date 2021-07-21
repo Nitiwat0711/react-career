@@ -67,11 +67,7 @@ class Contact extends Component {
                 </Link>
               </Row>
               <Row className="SocialMediaList">
-                <img
-                  src={window.location.origin + "/LINE_icon.png"}
-                  height="32px"
-                  alt="Line"
-                />
+                <img src={"LINE_icon.png"} height="32px" alt="Line" />
                 <Link
                   className="Socialtext"
                   href="https://line.me/R/ti/p/%40combuy"

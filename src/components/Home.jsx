@@ -22,12 +22,7 @@ class Home extends Component {
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={
-                  <img
-                    alt="example"
-                    src={window.location.origin + "/assets/Job4.jpg"}
-                  />
-                }
+                cover={<img alt="example" src="assets/Job4.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -39,12 +34,7 @@ class Home extends Component {
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={
-                  <img
-                    alt="example"
-                    src={window.location.origin + "/assets/Job5.jpg"}
-                  />
-                }
+                cover={<img alt="example" src="assets/Job5.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -56,12 +46,7 @@ class Home extends Component {
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={
-                  <img
-                    alt="example"
-                    src={window.location.origin + "/assets/Job4.jpg"}
-                  />
-                }
+                cover={<img alt="example" src="assets/Job4.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -73,12 +58,7 @@ class Home extends Component {
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={
-                  <img
-                    alt="example"
-                    src={window.location.origin + "/assets/Job5.jpg"}
-                  />
-                }
+                cover={<img alt="example" src="assets/Job5.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
