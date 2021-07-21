@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-career/static/css/main.afb24535.chunk.css",
+    "main.js": "/react-career/static/js/main.836f12ff.chunk.js",
+    "main.js.map": "/react-career/static/js/main.836f12ff.chunk.js.map",
+    "runtime-main.js": "/react-career/static/js/runtime-main.451d8619.js",
+    "runtime-main.js.map": "/react-career/static/js/runtime-main.451d8619.js.map",
+    "static/css/2.f8ed7361.chunk.css": "/react-career/static/css/2.f8ed7361.chunk.css",
+    "static/js/2.2b86bfdb.chunk.js": "/react-career/static/js/2.2b86bfdb.chunk.js",
+    "static/js/2.2b86bfdb.chunk.js.map": "/react-career/static/js/2.2b86bfdb.chunk.js.map",
+    "static/js/3.47c0bac3.chunk.js": "/react-career/static/js/3.47c0bac3.chunk.js",
+    "static/js/3.47c0bac3.chunk.js.map": "/react-career/static/js/3.47c0bac3.chunk.js.map",
+    "index.html": "/react-career/index.html",
+    "static/css/2.f8ed7361.chunk.css.map": "/react-career/static/css/2.f8ed7361.chunk.css.map",
+    "static/css/main.afb24535.chunk.css.map": "/react-career/static/css/main.afb24535.chunk.css.map",
+    "static/js/2.2b86bfdb.chunk.js.LICENSE.txt": "/react-career/static/js/2.2b86bfdb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.451d8619.js",
+    "static/css/2.f8ed7361.chunk.css",
+    "static/js/2.2b86bfdb.chunk.js",
+    "static/css/main.afb24535.chunk.css",
+    "static/js/main.836f12ff.chunk.js"
+  ]
+}
