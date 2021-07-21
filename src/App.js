@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-ro
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <div className="App">
       <Navbar></Navbar>
       {/* <React.StrictMode> */}
