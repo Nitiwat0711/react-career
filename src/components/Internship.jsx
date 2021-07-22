@@ -28,7 +28,7 @@ class Internship extends Component {
   async componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoading: false });
-    }, 1000);
+    }, 2000);
   }
 
   render() {
@@ -129,26 +129,30 @@ class Internship extends Component {
           )}
         </div>
 
-        <div
-          className="InternContact"
-          style={{
-            backgroundColor: "#373F41",
-            textAlign: "center",
-            height: "100%",
-            maxHeight: "200px",
-          }}
-        >
-          <Text style={{ color: "#FFFFFF", fontSize: "30px" }}>
-            ติดต่อฝึกงานหรือสหกิจศึกษา และส่ง Resume ได้ที่ คุณ abcd efghijkl
-          </Text>
-          <br></br>
-          <Link
-            style={{ color: "#FFFFFF", fontSize: "30px" }}
-            href="mailto:abcd_hr@mycombuy.com"
+        {this.state.isLoading ? (
+          <Skeleton active />
+        ) : (
+          <div
+            className="InternContact"
+            style={{
+              backgroundColor: "#373F41",
+              textAlign: "center",
+              height: "100%",
+              maxHeight: "200px",
+            }}
           >
-            abcd_hr@mycombuy.com
-          </Link>
-        </div>
+            <Text style={{ color: "#FFFFFF", fontSize: "30px" }}>
+              ติดต่อฝึกงานหรือสหกิจศึกษา และส่ง Resume ได้ที่ คุณ abcd efghijkl
+            </Text>
+            <br></br>
+            <Link
+              style={{ color: "#FFFFFF", fontSize: "30px" }}
+              href="mailto:abcd_hr@mycombuy.com"
+            >
+              abcd_hr@mycombuy.com
+            </Link>
+          </div>
+        )}
       </div>
     );
   }

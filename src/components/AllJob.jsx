@@ -233,7 +233,7 @@ class AllJob extends Component {
               )}
               <div
                 className="pagination"
-                style={{ textAlign: "right", padding: "2rem" }}
+                style={{ textAlign: "right", paddingTop: "2rem" }}
               >
                 <Pagination
                   pageSize={pageSize}

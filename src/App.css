@@ -1,18 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Athiti:wght@600&display=swap");
 @import "~antd/dist/antd.css";
 @import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 
 .App {
-  /* font-family: "Athiti", sans-serif;
-  font-size: 18px; */
   font-family: "Prompt", sans-serif;
 }
 
 .ant-form-item-label > label {
-  /* font-size: 18px; */
   font-weight: bold;
 }
 
-/* .content {
-  background-color: #f0f0f0;
-} */
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #00d3a8;
+  border-color: #00d3a8;
+}
+
+.ant-checkbox {
+  background: #ffffff;
+  border-color: #cdcdcd;
+  border-radius: 3px;
+}
+
+.ant-pagination-item {
+  border-radius: 20px;
+  border-color: #00d3a8;
+}
+
+.ant-pagination-item-active {
+  border-radius: 20px;
+  background-color: #00d3a8;
+  border-color: #00d3a8;
+  color: #ffffff;
+}

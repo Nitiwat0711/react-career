@@ -35,7 +35,7 @@ class Contact extends Component {
             <Col
               className="ColumnDetail"
               md={12}
-              style={{ paddingRight: "2rem" }}
+              style={{ paddingRight: "5rem", paddingLeft: "3rem" }}
             >
               <Title level={3}>ที่อยู่</Title>
               <Title level={5}>
@@ -50,7 +50,7 @@ class Contact extends Component {
             <Col
               className="ColumnDetail"
               md={12}
-              // style={{ paddingLeft: "2rem" }}
+              style={{ paddingLeft: "3rem" }}
             >
               <Title level={3}>Social Media</Title>
               <Row className="SocialMediaList">
@@ -65,7 +65,7 @@ class Contact extends Component {
                 </Link>
               </Row>
               <Row className="SocialMediaList">
-                <img src="LINE_icon.png" height="32px" alt="Line" />
+                <img src="line-icon_2.png" height="36px" alt="Line" />
                 <Link
                   className="Socialtext"
                   href="https://line.me/R/ti/p/%40combuy"

@@ -88,68 +88,70 @@ class JobDetail extends Component {
             loading={this.state.isLoading}
           />
         ) : (
-          <div className="jobContent">
-            <div className="highlight">
-              <Title level={3}>Job Highlights</Title>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.jobHighlight,
-                }}
-              ></div>
-            </div>
-            <div className="description">
-              <Title level={3}>Job Descriptions</Title>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.jobDescription,
-                }}
-              ></div>
-            </div>
-            <div className="qualification">
-              <Title level={3}>Qualifications</Title>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.jobQualification,
-                }}
-              ></div>
-            </div>
-            <div className="addition">
-              <Title level={3}>Additional Information </Title>
-              <ul>
-                <li>
-                  <Text strong>Career Level: </Text> {this.state.careerLevel}
-                </li>
-                <li>
-                  <Text strong>Years of Experience: </Text>
-                  {this.state.yearOfExperience}
-                </li>
-                <li>
-                  <Text strong>Job Type: </Text> {this.state.jobType}
-                </li>
-              </ul>
-            </div>
-            <div
-              className="link"
-              style={{
-                textAlign: "center",
-                margin: "3rem",
-              }}
-            >
-              <Link to={`/apply/${this.state.jobId}#`}>
-                <Button
-                  type="primary"
-                  size="large"
-                  style={{
-                    backgroundColor: "#00ccbc",
-                    borderColor: "#00ccbc",
-                    borderRadius: 20,
-                    width: 180,
-                    fontWeight: "bold",
+          <div className="container">
+            <div className="jobContent">
+              <div className="highlight">
+                <Title level={3}>Job Highlights</Title>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.jobHighlight,
                   }}
-                >
-                  Apply Now
-                </Button>
-              </Link>
+                ></div>
+              </div>
+              <div className="description">
+                <Title level={3}>Job Descriptions</Title>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.jobDescription,
+                  }}
+                ></div>
+              </div>
+              <div className="qualification">
+                <Title level={3}>Qualifications</Title>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: this.state.jobQualification,
+                  }}
+                ></div>
+              </div>
+              <div className="addition">
+                <Title level={3}>Additional Information </Title>
+                <ul>
+                  <li>
+                    <Text strong>Career Level: </Text> {this.state.careerLevel}
+                  </li>
+                  <li>
+                    <Text strong>Years of Experience: </Text>
+                    {this.state.yearOfExperience}
+                  </li>
+                  <li>
+                    <Text strong>Job Type: </Text> {this.state.jobType}
+                  </li>
+                </ul>
+              </div>
+              <div
+                className="link"
+                style={{
+                  textAlign: "center",
+                  margin: "3rem",
+                }}
+              >
+                <Link to={`/apply/${this.state.jobId}#`}>
+                  <Button
+                    type="primary"
+                    size="large"
+                    style={{
+                      backgroundColor: "#00ccbc",
+                      borderColor: "#00ccbc",
+                      borderRadius: 20,
+                      width: 180,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Apply Now
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         )}
