@@ -105,7 +105,6 @@ class AllJob extends Component {
 
   async componentDidMount() {
     const url = "http://localhost:5000/apis/jobs";
-    // const url = "http://api.randomuser.me";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({
@@ -174,8 +173,13 @@ class AllJob extends Component {
         </Carousel>
 
         {/* <p>{JSON.stringify(this.state.jobsList)}</p> */}
-        <Layout style={layoutStyle}>
-          <Sider theme="light" style={siderStyle}>
+        <Layout>
+          <Sider
+            theme="light"
+            style={siderStyle}
+            breakpoint="lg"
+            collapsedWidth="0"
+          >
             <Row>
               <Text strong>ตัวกรอง</Text>
             </Row>

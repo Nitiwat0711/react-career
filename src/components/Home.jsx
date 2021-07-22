@@ -17,12 +17,12 @@ class Home extends Component {
         <Slidebar></Slidebar>
         <div className="Life">
           <h3>LIFE AT COMBUY</h3>
-          <Row className="LifeDetail">
-            <Col xs={24} xl={6}>
+          <Row className="LifeDetail" justify="space-between">
+            <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={<img alt="example" src="assets/Job4.jpg" />}
+                cover={<img alt="example" src="Job4.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -30,11 +30,11 @@ class Home extends Component {
                 />
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={<img alt="example" src="assets/Job5.jpg" />}
+                cover={<img alt="example" src="Job5.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -42,11 +42,11 @@ class Home extends Component {
                 />
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={<img alt="example" src="assets/Job4.jpg" />}
+                cover={<img alt="example" src="Job4.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -54,11 +54,11 @@ class Home extends Component {
                 />
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{ width: 260 }}
-                cover={<img alt="example" src="assets/Job5.jpg" />}
+                cover={<img alt="example" src="Job5.jpg" />}
               >
                 <Meta
                   title="Ad eos saepe lucilius"
@@ -72,7 +72,7 @@ class Home extends Component {
         <div className="Life">
           <h3>WHY COMBUY?</h3>
           <Row className="LifeDetail">
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 className="DetailCard"
                 style={{ width: 260, height: 450 }}
@@ -91,7 +91,7 @@ class Home extends Component {
                 </p>
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 className="DetailCard"
                 style={{ width: 260, height: 450 }}
@@ -107,7 +107,7 @@ class Home extends Component {
                 </p>
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 className="DetailCard"
                 style={{ width: 260, height: 450 }}
@@ -127,7 +127,7 @@ class Home extends Component {
                 </p>
               </Card>
             </Col>
-            <Col xs={24} xl={6}>
+            <Col lg={6} md={12} xs={24}>
               <Card
                 className="DetailCard"
                 style={{ width: 260, height: 450 }}

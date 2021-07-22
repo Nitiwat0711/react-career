@@ -1,7 +1,9 @@
 .Detail {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  height: 16rem;
+  /* margin-left: 5rem;
+  margin-right: 5rem; */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* height: 16rem; */
 }
 
 .ParentDetail {

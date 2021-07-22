@@ -1,6 +1,9 @@
 .Life {
-  margin-top: 3rem;
-  margin-left: 5rem;
+  /* margin-top: 1rem; */
+  /* padding: 2.5rem; */
+  padding: 2rem;
+  /* padding-left: rem; */
+  margin-left: 2rem;
 }
 
 .LifeDetail {
@@ -10,6 +13,10 @@
 
 Col {
   margin: 5px;
+}
+
+.ant-col {
+  margin-bottom: 20px;
 }
 
 /* .Why {

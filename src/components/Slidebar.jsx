@@ -34,7 +34,7 @@ class Slidebar extends Component {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="10000">
-            <img src="assets/Job1.jpg" class="d-block w-100" alt="..." />
+            <img src="Job1.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h3>Work and Life Balance</h3>
               <p>
@@ -46,7 +46,7 @@ class Slidebar extends Component {
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img src="assets/Job2.jpg" className="d-block w-100" alt="..." />
+            <img src="Job2.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h3>Teamwork</h3>
               <p>
@@ -58,7 +58,7 @@ class Slidebar extends Component {
             </div>
           </div>
           <div className="carousel-item">
-            <img src="assets/Job3.jpg" className="d-block w-100" alt="..." />
+            <img src="Job3.jpg" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h3>Third slide label</h3>
               <p>
