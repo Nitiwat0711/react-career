@@ -1,17 +1,7 @@
 import React, { Component, useEffect } from "react";
-import {
-  Carousel,
-  Typography,
-  AutoComplete,
-  Button,
-  Select,
-  Skeleton,
-  Input,
-} from "antd";
-import addressth from "./data/addressth.json";
+import { Carousel, Typography, Select, Skeleton, Row, Col } from "antd";
 
-const { Title, Text } = Typography;
-const { Option } = Select;
+const { Title, Text, Link } = Typography;
 
 const contentStyle = {
   height: "350px",
@@ -36,122 +26,129 @@ class Internship extends Component {
   };
 
   async componentDidMount() {
-    // const url = "http://localhost:5000/apis/addresses";
-    // const response = await fetch(url);
-    // const address = await response.json();
-    // const newData = address.map(address);
-    // console.log(newData);
-    this.setState({ address: addressth, isLoading: false });
-    // console.log(address.rows[99]);
-    console.log(this.state.address);
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 1000);
   }
 
   render() {
-    const onSearch = (val) => {
-      let filtered = addressth.filter(
-        (obj) =>
-          obj.id !== 0 &&
-          obj.sub_district_name.toString().toLowerCase().includes(val)
-      );
-      console.log(filtered);
-      this.setState({
-        options: filtered.map((item, index) => {
-          return {
-            key: item.sub_district_id,
-            district_name: item.district_name,
-            sub_district_name: item.sub_district_name,
-            province_name: item.province_name,
-            postal_code: item.postal_code,
-            value: item.sub_district_name,
-            label:
-              item.sub_district_name +
-              ", " +
-              item.district_name +
-              ", " +
-              item.province_name +
-              ", " +
-              item.postal_code,
-          };
-        }),
-      });
-      console.log(this.state.options);
-    };
-
-    const onSelect = (val, option) => {
-      console.log("onSelect", val, option);
-      this.setState({
-        sub_district: option.sub_district_name,
-        district: option.district_name,
-        province: option.province_name,
-        zip_code: option.postal_code,
-      });
-    };
-
     return (
       <div>
         <Carousel>
           <div>
-            {/* <img
-              src={window.location.origin + "/assets/Job2.jpg"}
-              alt="ฝึกงานกับเรา"
-            ></img> */}
             <Title level={1} style={contentStyle}>
               ฝึกงานกับเรา
             </Title>
           </div>
         </Carousel>
-
-        <AutoComplete
-          dropdownClassName="certain-category-search-dropdown"
-          dropdownMatchSelectWidth={500}
-          style={{
-            width: 250,
-          }}
-          options={this.state.options}
-          onSelect={onSelect}
-          onSearch={onSearch}
+        <div
+          className="content"
+          style={{ padding: "3rem", backgroundColor: "#f0f0f0" }}
         >
-          <Input size="large" placeholder="input here" />
-        </AutoComplete>
-
-        {this.state.isLoading ? (
-          <div style={{ textAlign: "center", padding: "5rem" }}>
+          {this.state.isLoading ? (
             <Skeleton active />
-          </div>
-        ) : (
-          <div style={{ textAlign: "center", padding: "5rem" }}>
-            {/* <input
-              type="text"
-              placeholder="Search..."
-              onChange={(event) =>
-                this.setState({
-                  searchTerm: event.target.value,
-                })
-              }
-            /> */}
+          ) : (
+            <>
+              <Row>
+                <Col md={10} style={{ textAlign: "center" }}>
+                  <img
+                    src="internship.jpg"
+                    alt=""
+                    style={{ width: "100%", maxWidth: "500px" }}
+                  />
+                </Col>
+                <Col md={12} style={{ paddingLeft: "1rem" }}>
+                  <Title level={3}>
+                    Est tation latine aliquip id, mea ad tale illud
+                    definitiones. Periculis omittantur necessitatibus eum ad,
+                    pro eripuit minimum comprehensam ne, usu cu stet prompta
+                    reformidans.
+                  </Title>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={12} style={{ paddingRight: "5rem" }}>
+                  <Title level={3}>ฝึกงานที่นี่ได้อะไรบ้าง</Title>
+                  <Text>
+                    At eripuit signiferumque sea, vel ad mucius molestie, cu
+                    labitur.At eripuit signiferumque sea, vel ad mucius
+                    molestie, cu labitur.At eripuit signiferumque sea, vel ad
+                    mucius molestie, cu labitur.At eripuit signiferumque sea,
+                    vel ad mucius molestie, cu labitur.At eripuit signiferumque
+                    sea, vel ad mucius molestie, cu labitur.At eripuit
+                    signiferumque sea, vel ad mucius molestie, cu labitur.At
+                    eripuit signiferumque sea, vel ad mucius molestie, cu
+                    labitur.At eripuit signiferumque sea, vel ad mucius
+                    molestie, cu labitur.At eripuit signiferumque sea, vel ad
+                    mucius molestie, cu labitur.At eripuit signiferumque sea,
+                    vel ad mucius molestie, cu labitur.At eripuit signiferumque
+                    sea, vel ad mucius molestie, cu labitur.At eripuit
+                    signiferumque sea, vel ad mucius molestie, cu labitur.At
+                    eripuit signiferumque sea, vel ad mucius molestie, cu
+                    labitur.At eripuit signiferumque sea, vel ad mucius
+                    molestie, cu labitur.
+                  </Text>
+                </Col>
+                <Col md={12} style={{ paddingRight: "3rem" }}>
+                  <Title level={3}>คุณสมบัติผู้มาฝึกงาน</Title>
+                  <ul>
+                    <li>
+                      <Text>
+                        signiferumque sea, vel ad mucius molestie, cu labitur.At
+                        eripuit signiferumque sea
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        signiferumque sea, vel ad mucius molestie, cu labitur.At
+                        eripuit signiferumque sea
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        signiferumque sea, vel ad mucius molestie, cu labitur.At
+                        eripuit signiferumque sea
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        signiferumque sea, vel ad mucius molestie, cu labitur.At
+                        eripuit signiferumque sea
+                      </Text>
+                    </li>
+                    <li>
+                      <Text>
+                        signiferumque sea, vel ad mucius molestie, cu labitur.At
+                        eripuit signiferumque sea
+                      </Text>
+                    </li>
+                  </ul>
+                </Col>
+              </Row>
+            </>
+          )}
+        </div>
 
-            {/* {this.state.address
-              .filter((value) => {
-                if (this.state.searchTerm === "") {
-                  return value;
-                } else if (
-                  value.sub_district_name
-                    .toLowerCase()
-                    .includes(this.state.searchTerm.toLocaleLowerCase())
-                ) {
-                  return value;
-                }
-              })
-              .map((value, key) => {
-                return (
-                  <div className="subDistrict" key={key}>
-                    <Text>{value.sub_district_name}</Text>
-                    <br />
-                  </div>
-                );
-              })} */}
-          </div>
-        )}
+        <div
+          className="InternContact"
+          style={{
+            backgroundColor: "#373F41",
+            textAlign: "center",
+            height: "100%",
+            maxHeight: "200px",
+          }}
+        >
+          <Text style={{ color: "#FFFFFF", fontSize: "30px" }}>
+            ติดต่อฝึกงานหรือสหกิจศึกษา และส่ง Resume ได้ที่ คุณ abcd efghijkl
+          </Text>
+          <br></br>
+          <Link
+            style={{ color: "#FFFFFF", fontSize: "30px" }}
+            href="mailto:abcd_hr@mycombuy.com"
+          >
+            abcd_hr@mycombuy.com
+          </Link>
+        </div>
       </div>
     );
   }
