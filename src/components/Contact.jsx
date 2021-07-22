@@ -35,7 +35,7 @@ class Contact extends Component {
             <Col
               className="ColumnDetail"
               md={12}
-              // style={{ paddingRight: "10rem" }}
+              style={{ paddingRight: "2rem" }}
             >
               <Title level={3}>ที่อยู่</Title>
               <Title level={5}>
