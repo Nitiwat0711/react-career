@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-career/static/css/main.ab6ab59a.chunk.css",
-    "main.js": "/react-career/static/js/main.2aeb8efb.chunk.js",
-    "main.js.map": "/react-career/static/js/main.2aeb8efb.chunk.js.map",
+    "main.js": "/react-career/static/js/main.dfd620b6.chunk.js",
+    "main.js.map": "/react-career/static/js/main.dfd620b6.chunk.js.map",
     "runtime-main.js": "/react-career/static/js/runtime-main.41f1adf5.js",
     "runtime-main.js.map": "/react-career/static/js/runtime-main.41f1adf5.js.map",
     "static/css/2.f8ed7361.chunk.css": "/react-career/static/css/2.f8ed7361.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.f8ed7361.chunk.css",
     "static/js/2.5b39c192.chunk.js",
     "static/css/main.ab6ab59a.chunk.css",
-    "static/js/main.2aeb8efb.chunk.js"
+    "static/js/main.dfd620b6.chunk.js"
   ]
 }
