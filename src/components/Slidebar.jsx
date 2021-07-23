@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "../styles/carousel.css";
-import { Skeleton } from "antd";
 import SkeletonElement from "../skeletons/SkeletonElement";
 
 class Slidebar extends Component {
   state = {
-    loadingImage1: true,
+    loadingSlide1: true,
   };
 
   render() {
@@ -40,14 +39,14 @@ class Slidebar extends Component {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active" data-bs-interval="10000">
-              {this.state.loadingImage1 ? (
+              {this.state.loadingSlide1 ? (
                 <SkeletonElement type="carousel" />
               ) : null}
 
               <img
                 src="Job1.jpg"
                 className="d-block w-100"
-                onLoad={() => this.setState({ loadingImage1: false })}
+                onLoad={() => this.setState({ loadingSlide1: false })}
                 alt="..."
               />
               <div className="carousel-caption d-none d-md-block">

@@ -34,14 +34,14 @@ class Home extends Component {
                 style={{ width: 260 }}
                 cover={
                   <>
-                    {this.state.loadingImage1 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
                     <img
                       alt="example"
                       src="Job4.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
                     />
+                    {this.state.loadingImage1 ? (
+                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                    ) : null}
                   </>
                 }
               >
@@ -61,14 +61,14 @@ class Home extends Component {
                 style={{ width: 260 }}
                 cover={
                   <>
-                    {this.state.loadingImage2 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
                     <img
                       alt="example"
                       src="Job5.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
+                    {this.state.loadingImage2 ? (
+                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                    ) : null}
                   </>
                 }
               >
@@ -88,14 +88,14 @@ class Home extends Component {
                 style={{ width: 260 }}
                 cover={
                   <>
-                    {this.state.loadingImage1 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
                     <img
                       alt="example"
                       src="Job4.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
                     />
+                    {this.state.loadingImage1 ? (
+                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                    ) : null}
                   </>
                 }
               >
@@ -115,14 +115,14 @@ class Home extends Component {
                 style={{ width: 260 }}
                 cover={
                   <>
-                    {this.state.loadingImage2 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
                     <img
                       alt="example"
                       src="Job5.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
+                    {this.state.loadingImage2 ? (
+                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                    ) : null}
                   </>
                 }
               >
