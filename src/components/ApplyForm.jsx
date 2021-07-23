@@ -843,21 +843,12 @@ const ApplyForm = (props) => {
                   <ArrowLeftOutlined />
                   กลับไปแก้ไขข้อมูล
                 </Button>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  style={{ borderRadius: 20, width: 120, fontWeight: "bold" }}
-                >
+                <Button type="primary" htmlType="submit">
                   ยืนยัน
                 </Button>
               </Space>
             ) : (
-              <Button
-                type="primary"
-                htmlType="submit"
-                onClick={onConfirm}
-                style={{ borderRadius: 20, width: 120, fontWeight: "bold" }}
-              >
+              <Button type="primary" htmlType="submit" onClick={onConfirm}>
                 บันทึก
               </Button>
             )}

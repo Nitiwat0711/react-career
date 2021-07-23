@@ -121,7 +121,7 @@ class Contact extends Component {
                   marginRight: "auto",
                   marginBottom: "5rem",
                 }}
-                allowfullscreen=""
+                allowFullScreen=""
                 loading="lazy"
               ></iframe>
             </Row>

@@ -141,11 +141,7 @@ class JobDetail extends Component {
                     type="primary"
                     size="large"
                     style={{
-                      backgroundColor: "#00ccbc",
-                      borderColor: "#00ccbc",
-                      borderRadius: 20,
                       width: 180,
-                      fontWeight: "bold",
                     }}
                   >
                     Apply Now

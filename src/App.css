@@ -31,3 +31,11 @@
   border-color: #00d3a8;
   color: #ffffff;
 }
+
+.ant-btn-primary {
+  border-radius: 20px;
+  min-width: 120px;
+  background-color: #00ccbc;
+  border-color: #00ccbc;
+  font-weight: bold;
+}
