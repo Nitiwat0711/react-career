@@ -22,6 +22,7 @@ class Home extends Component {
     }, 1000);
   }
   render() {
+    const { loadingImage1 } = this.state;
     return (
       <div>
         <Slidebar></Slidebar>
@@ -35,24 +36,28 @@ class Home extends Component {
                 cover={
                   <>
                     <img
+                      style={loadingImage1 ? { display: "none" } : null}
                       alt="example"
                       src="Job4.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
+                      on
                     />
-                    {this.state.loadingImage1 ? (
+                    {loadingImage1 && (
                       <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
+                    )}
                   </>
                 }
               >
-                {this.state.loadingImage1 ? (
-                  <Skeleton active paragraph={{ rows: 2 }} />
-                ) : (
+                <Skeleton
+                  active
+                  paragraph={{ rows: 2 }}
+                  loading={this.state.loadingImage1}
+                >
                   <Meta
                     title="Ad eos saepe lucilius"
                     description="At eripuit signiferumque sea, vel ad mucius molestie, cu labitur."
                   />
-                )}
+                </Skeleton>
               </Card>
             </Col>
             <Col lg={6} md={12} xs={24}>
@@ -62,13 +67,16 @@ class Home extends Component {
                 cover={
                   <>
                     <img
+                      style={
+                        this.state.loadingImage2 ? { display: "none" } : null
+                      }
                       alt="example"
                       src="Job5.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
-                    {this.state.loadingImage2 ? (
+                    {this.state.loadingImage2 && (
                       <Skeleton.Image style={{ width: 260, height: 175 }} />
-                    ) : null}
+                    )}
                   </>
                 }
               >
@@ -89,6 +97,7 @@ class Home extends Component {
                 cover={
                   <>
                     <img
+                      style={loadingImage1 ? { display: "none" } : null}
                       alt="example"
                       src="Job4.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
@@ -116,6 +125,9 @@ class Home extends Component {
                 cover={
                   <>
                     <img
+                      style={
+                        this.state.loadingImage2 ? { display: "none" } : null
+                      }
                       alt="example"
                       src="Job5.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
