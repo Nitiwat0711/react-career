@@ -82,11 +82,13 @@ class JobDetail extends Component {
           </div>
         </Carousel>
         {this.state.isLoading ? (
-          <Skeleton
-            className="jobContent"
-            active
-            loading={this.state.isLoading}
-          />
+          <div className="container">
+            <Skeleton
+              className="jobContent"
+              active
+              loading={this.state.isLoading}
+            />
+          </div>
         ) : (
           <div className="container">
             <div className="jobContent">
