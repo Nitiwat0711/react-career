@@ -147,6 +147,7 @@ const ApplyForm = (props) => {
     // console.log(token);
     values.token = token;
     values.job = jobPos;
+    values.jobId = jobId;
 
     fetch(`${process.env.REACT_APP_API_URL}/apis/users`, {
       method: "POST",
@@ -853,9 +854,12 @@ const ApplyForm = (props) => {
               </Button>
             )}
           </Form.Item>
-
           <ReCAPTCHA
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY_LOCAL}
+            sitekey={
+              process.env.NODE_ENV === "development"
+                ? process.env.REACT_APP_RECAPTCHA_SITEKEY_LOCAL
+                : process.env.REACT_APP_RECAPTCHA_SITEKEY_GITHUB
+            }
             size="invisible"
             ref={reRef}
           />
