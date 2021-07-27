@@ -38,7 +38,7 @@ class Home extends Component {
                     <img
                       style={loadingImage1 ? { display: "none" } : null}
                       alt="example"
-                      src="Job4.jpg"
+                      src="Job4_small.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
                       on
                     />
@@ -71,7 +71,7 @@ class Home extends Component {
                         this.state.loadingImage2 ? { display: "none" } : null
                       }
                       alt="example"
-                      src="Job5.jpg"
+                      src="Job5_small.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
                     {this.state.loadingImage2 && (
@@ -99,7 +99,7 @@ class Home extends Component {
                     <img
                       style={loadingImage1 ? { display: "none" } : null}
                       alt="example"
-                      src="Job4.jpg"
+                      src="Job4_small.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
                     />
                     {this.state.loadingImage1 ? (
@@ -129,7 +129,7 @@ class Home extends Component {
                         this.state.loadingImage2 ? { display: "none" } : null
                       }
                       alt="example"
-                      src="Job5.jpg"
+                      src="Job5_small.jpg"
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
                     {this.state.loadingImage2 ? (
