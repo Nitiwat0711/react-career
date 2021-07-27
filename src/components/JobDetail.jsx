@@ -38,7 +38,7 @@ class JobDetail extends Component {
 
   async componentDidMount() {
     const jobId = this.props.match.params.jobId;
-    const url = "http://localhost:5000/apis/job/" + jobId;
+    const url = process.env.REACT_APP_API_URL + "/apis/job/" + jobId;
     // const response = await fetch(url);
     await fetch(url)
       .then((response) => {

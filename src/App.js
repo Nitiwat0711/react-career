@@ -11,6 +11,7 @@ import JobDetail from './components/JobDetail';
 import ScrollToTop from './components/ScrollToTop';
 import NotFound from './components/NotFound';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
+require('dotenv').config()
 
 
 

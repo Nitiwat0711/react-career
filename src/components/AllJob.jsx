@@ -104,7 +104,7 @@ class AllJob extends Component {
   };
 
   async componentDidMount() {
-    const url = "http://localhost:5000/apis/jobs";
+    const url = process.env.REACT_APP_API_URL + "/apis/jobs";
     const response = await fetch(url);
     const data = await response.json();
     this.setState({
@@ -123,7 +123,7 @@ class AllJob extends Component {
 
     const showFilteredResults = async (filters) => {
       console.log(filters.continents);
-      const url = "http://localhost:5000/apis/jobs";
+      const url = process.env.REACT_APP_API_URL + "/apis/jobs";
       const response = await fetch(url);
       const data = await response.json();
       console.log(data.jobs);

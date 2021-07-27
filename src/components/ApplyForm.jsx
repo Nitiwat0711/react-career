@@ -67,7 +67,7 @@ const validateMessages = {
 
 const uploadPdfFile = {
   name: "file",
-  action: "http://localhost:5000/uploadFile",
+  action: process.env.REACT_APP_API_URL + "/uploadFile",
   headers: {
     authorization: "authorization-text",
   },
@@ -106,7 +106,7 @@ const ApplyForm = (props) => {
       await history.push("/applySucess");
     } else {
       const jobId = props.match.params.jobId;
-      const url = "http://localhost:5000/apis/jobPosition/" + jobId;
+      const url = process.env.REACT_APP_API_URL + "/apis/jobPosition/" + jobId;
       await fetch(url)
         .then((response) => {
           if (!response.ok) {
@@ -148,7 +148,7 @@ const ApplyForm = (props) => {
     values.token = token;
     values.job = jobPos;
 
-    fetch("http://localhost:5000/apis/users", {
+    fetch(`${process.env.REACT_APP_API_URL}/apis/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
@@ -855,7 +855,7 @@ const ApplyForm = (props) => {
           </Form.Item>
 
           <ReCAPTCHA
-            sitekey="6LcxoD4bAAAAAKtuGJtFvNmwgyCBK9-Hkfz_wzna"
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY_LOCAL}
             size="invisible"
             ref={reRef}
           />
