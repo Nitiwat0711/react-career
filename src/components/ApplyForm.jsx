@@ -32,7 +32,7 @@ const { Option } = Select;
 const { Title, Text } = Typography;
 const { confirm } = Modal;
 
-const requiredBool = false;
+const requiredBool = true;
 
 const layout = {
   labelCol: {
@@ -125,6 +125,14 @@ const ApplyForm = (props) => {
     }
   });
 
+  const onSubmitFail = (values) => {
+    console.log(values);
+    Modal.error({
+      title: "กรุณากรอกข้อมูลที่จำเป็นให้ครบถ้วน",
+      content: "",
+    });
+  };
+
   const onConfirm = (values) => {
     console.log(values);
     setdisabledInput(true);
@@ -180,10 +188,11 @@ const ApplyForm = (props) => {
   const [addressValue, setAddressValue] = React.useState();
   const [militaryValue, setMilitaryValue] = React.useState();
   const [drivingcarValue, setDrivingCarValue] = React.useState();
-  const [drivingcarLicenseValue, setDrivingCarLicenseValue] = React.useState();
+  const [drivingcarLicenseValue, setDrivingCarLicenseValue] =
+    React.useState(true);
   const [drivingMotorcyValue, setDrivingMotorcyValue] = React.useState();
   const [drivingMotorcyLicenseValue, setDrivingMotorcyLicenseValue] =
-    React.useState();
+    React.useState(true);
   const [currentAddressType, setCurrentAddressType] = React.useState(true);
   const [educationList, setEducationList] = React.useState({
     studyLevel: "",
@@ -225,9 +234,9 @@ const ApplyForm = (props) => {
           {...layout}
           name="nest-messages"
           onFinish={onFinish}
-          // onFinishFailed={}
           validateMessages={validateMessages}
           requiredMark={"optional"}
+          onFinishFailed={onSubmitFail}
         >
           <Form.Item
             name={["user", "salary"]}
@@ -237,7 +246,6 @@ const ApplyForm = (props) => {
                 required: requiredBool,
               },
             ]}
-            initialValue="30000"
           >
             <InputNumber
               min="1"
@@ -266,7 +274,6 @@ const ApplyForm = (props) => {
                 required: requiredBool,
               },
             ]}
-            initialValue="นิธิวัฒน์ อภัยกาวี"
           >
             <Input disabled={disabledInput} />
           </Form.Item>
@@ -305,7 +312,6 @@ const ApplyForm = (props) => {
                 type: "email",
               },
             ]}
-            initialValue="nitiwat.a@ku.th"
           >
             <Input disabled={disabledInput} />
           </Form.Item>
@@ -356,13 +362,11 @@ const ApplyForm = (props) => {
               <Space>
                 <Radio value={3} onClick={() => setCurrentAddressType(false)}>
                   อื่นๆ (โปรดระบุ)
-                </Radio>
-                <Form.Item name={["user", "currentAddressType"]}>
                   <Input
-                    disabled={currentAddressType}
+                    disabled={currentAddressType || disabledInput}
                     style={{ width: 120, marginLeft: 10 }}
                   />
-                </Form.Item>
+                </Radio>
               </Space>
             </Radio.Group>
           </Form.Item>
@@ -673,29 +677,6 @@ const ApplyForm = (props) => {
             </Radio.Group>
           </Form.Item>
           <Form.Item
-            name={["user", "drivingCarLicense"]}
-            label="ใบอนุญาตขับรถยนต์"
-            rules={[{ required: requiredBool }]}
-          >
-            <Radio.Group
-              value={drivingcarLicenseValue}
-              disabled={disabledInput}
-            >
-              <Radio value={1} onClick={() => setDrivingCarLicenseValue(1)}>
-                ไม่มี
-              </Radio>
-              <Radio value={2} onClick={() => setDrivingCarLicenseValue(2)}>
-                มี (โปรดระบุ)
-                {drivingcarLicenseValue === 2 ? (
-                  <Input
-                    name={["user", "drivingCarLicenseType"]}
-                    style={{ width: 100, marginLeft: 10 }}
-                  />
-                ) : null}
-              </Radio>
-            </Radio.Group>
-          </Form.Item>
-          <Form.Item
             name={["user", "drivingMotorcycle"]}
             label="ขับรถจักรยานยนต์"
             rules={[{ required: requiredBool }]}
@@ -710,25 +691,46 @@ const ApplyForm = (props) => {
             </Radio.Group>
           </Form.Item>
           <Form.Item
+            name={["user", "drivingCarLicense"]}
+            label="ใบอนุญาตขับรถยนต์"
+            rules={[{ required: requiredBool }]}
+          >
+            <Radio.Group disabled={disabledInput}>
+              <Radio value={0} onClick={() => setDrivingCarLicenseValue(true)}>
+                ไม่มี
+              </Radio>
+              <Radio value={1} onClick={() => setDrivingCarLicenseValue(false)}>
+                มี (โปรดระบุ)
+                <Input
+                  style={{ width: 250, marginLeft: 10 }}
+                  disabled={drivingcarLicenseValue || disabledInput}
+                  placeholder={"ระบุประเภทใบขับขี่"}
+                />
+              </Radio>
+            </Radio.Group>
+          </Form.Item>
+          <Form.Item
             name={["user", "drivingMotorcycleLicense"]}
             label="ใบอนุญาตขับรถจักรยานยนต์"
             rules={[{ required: requiredBool }]}
           >
-            <Radio.Group
-              value={drivingMotorcyLicenseValue}
-              disabled={disabledInput}
-            >
-              <Radio value={1} onClick={() => setDrivingMotorcyLicenseValue(1)}>
+            <Radio.Group disabled={disabledInput}>
+              <Radio
+                value={0}
+                onClick={() => setDrivingMotorcyLicenseValue(true)}
+              >
                 ไม่มี
               </Radio>
-              <Radio value={2} onClick={() => setDrivingMotorcyLicenseValue(2)}>
+              <Radio
+                value={1}
+                onClick={() => setDrivingMotorcyLicenseValue(false)}
+              >
                 มี (โปรดระบุ)
-                {drivingMotorcyLicenseValue === 2 ? (
-                  <Input
-                    name={["user", "drivingMotorcycleLicenseType"]}
-                    style={{ width: 100, marginLeft: 10 }}
-                  />
-                ) : null}
+                <Input
+                  style={{ width: 250, marginLeft: 10 }}
+                  disabled={drivingMotorcyLicenseValue || disabledInput}
+                  placeholder={"ระบุประเภทใบขับขี่"}
+                />
               </Radio>
             </Radio.Group>
           </Form.Item>
@@ -787,7 +789,7 @@ const ApplyForm = (props) => {
             label="CV (.pdf)"
             rules={[{ required: requiredBool }]}
           >
-            <Upload {...uploadPdfFile}>
+            <Upload {...uploadPdfFile} disabled={disabledInput}>
               <Button icon={<UploadOutlined disabled={disabledInput} />}>
                 Click to Upload
               </Button>

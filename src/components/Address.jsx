@@ -73,7 +73,6 @@ const Address = (props) => {
         name={["user", "addressDetail"]}
         label="รายละเอียดที่อยู่"
         rules={[{ required: true }]}
-        initialValue="86/14 ถนนงามวงศ์วาน 46"
       >
         <Input.TextArea
           placeholder="บ้านเลขที่ ชื่อหมู่บ้าน/คอนโด/อพาร์ทเม้นท์ ถนน ซอย เป็นต้น"
