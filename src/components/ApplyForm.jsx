@@ -80,7 +80,7 @@ const uploadPdfFile = {
     if (!isLt2M) {
       message.error("file must smaller than 2MB!");
     }
-    return isPdf && isLt2M;
+    return isPdf && isLt2M ? true : Upload.LIST_IGNORE;
   },
   onChange(info) {
     if (info.file.status !== "uploading") {
