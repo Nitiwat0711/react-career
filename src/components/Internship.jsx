@@ -1,5 +1,5 @@
-import React, { Component, useEffect } from "react";
-import { Carousel, Typography, Select, Skeleton, Row, Col } from "antd";
+import React, { Component } from "react";
+import { Carousel, Typography, Skeleton, Row, Col } from "antd";
 
 const { Title, Text, Link } = Typography;
 

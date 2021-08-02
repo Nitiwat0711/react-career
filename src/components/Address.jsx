@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Input, Form, AutoComplete, Select } from "antd";
 import addressth from "./data/addressth.json";
 
-const { Option } = Select;
-
 const Address = (props) => {
   const [options, setoptions] = useState([]);
   const [subDistrict, setsubDistrict] = useState("test");
@@ -80,7 +78,7 @@ const Address = (props) => {
         />
       </Form.Item>
       <Form.Item
-        name={["user", "search"]}
+        name={["user", "addressDetail2"]}
         label="ที่อยู่"
         rules={[{ required: true }]}
       >

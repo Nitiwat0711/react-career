@@ -1,15 +1,5 @@
 import React, { Component } from "react";
-import {
-  Carousel,
-  Typography,
-  Layout,
-  Checkbox,
-  Row,
-  Col,
-  Card,
-  Button,
-  Skeleton,
-} from "antd";
+import { Carousel, Typography, Button, Skeleton } from "antd";
 import { Link, withRouter } from "react-router-dom";
 import "../styles/jobDetail.css";
 const { Title, Text } = Typography;

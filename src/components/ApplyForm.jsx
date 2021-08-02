@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Form,
   Input,
@@ -26,11 +26,9 @@ import { withRouter } from "react-router-dom";
 import Address from "./Address";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
-import { ExclamationCircleOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
-const { Title, Text } = Typography;
-const { confirm } = Modal;
+const { Title } = Typography;
 
 const requiredBool = true;
 
@@ -101,13 +99,13 @@ const ApplyForm = (props) => {
   const [jobPos, setJobPos] = React.useState();
   const reRef = useRef();
   const [disabledInput, setdisabledInput] = React.useState(false);
-  useEffect(async () => {
+  useEffect(() => {
     if (isSubmit) {
-      await history.push("/applySucess");
+      history.push("/applySucess");
     } else {
       const jobId = props.match.params.jobId;
       const url = process.env.REACT_APP_API_URL + "/apis/jobPosition/" + jobId;
-      await fetch(url)
+      fetch(url)
         .then((response) => {
           if (!response.ok) {
             history.push("/404");
@@ -180,7 +178,6 @@ const ApplyForm = (props) => {
     }, 500);
   };
 
-  const [value, setValue] = React.useState();
   const [speakingValue, setSpeakingValue] = React.useState();
   const [readingValue, setReadingValue] = React.useState();
   const [writingValue, setWritingValue] = React.useState();
@@ -201,14 +198,6 @@ const ApplyForm = (props) => {
     studyDepartment: "",
     GPA: "",
   });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setEducationList({
-      ...educationList,
-      [name]: value,
-    });
-  };
 
   return (
     <>
@@ -348,7 +337,7 @@ const ApplyForm = (props) => {
             <Input disabled={disabledInput} />
           </Form.Item>
           <Form.Item
-            name={["user", "currentAddress"]}
+            name={["user", "addressType"]}
             label="ที่อยู่ปัจจุบัน"
             rules={[{ required: requiredBool }]}
           >
@@ -371,7 +360,7 @@ const ApplyForm = (props) => {
             </Radio.Group>
           </Form.Item>
           <Address disabledInputToChild={disabledInput} />
-          <Form.Item name={["user", "malitary_status"]} label="สถานะทางทหาร">
+          <Form.Item name={["user", "militaryStatus"]} label="สถานะทางทหาร">
             <Select
               placeholder="เลือกสถานะ"
               value={militaryValue}

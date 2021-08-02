@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Typography } from "antd";
-const { Title, Text } = Typography;
+const { Title } = Typography;
 
 const contentStyle = {
   textAlign: "center",

@@ -3,8 +3,6 @@ import Slidebar from "./Slidebar";
 import "../styles/home.css";
 import "antd/dist/antd.css";
 import { Row, Col, Card, Typography, Skeleton } from "antd";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 
 const { Meta } = Card;
 const { Title } = Typography;

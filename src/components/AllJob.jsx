@@ -3,22 +3,17 @@ import {
   Carousel,
   Typography,
   Layout,
-  Checkbox,
   Row,
-  Col,
   Card,
   Button,
   Pagination,
   Skeleton,
-  Collapse,
 } from "antd";
 import { Link } from "react-router-dom";
 import Filter from "./Filter";
 
 const { Title, Text } = Typography;
-const { Header, Footer, Sider, Content } = Layout;
-const CheckboxGroup = Checkbox.Group;
-const { Panel } = Collapse;
+const { Header, Sider, Content } = Layout;
 
 const contentStyle = {
   height: "350px",
@@ -27,11 +22,6 @@ const contentStyle = {
   textAlign: "center",
   background: "#00ccbc",
   margin: "0",
-};
-
-const layoutStyle = {
-  // padding: "1rem",
-  // background: "#364d79",
 };
 
 const siderStyle = {
@@ -138,7 +128,8 @@ class AllJob extends Component {
         });
       } else {
         let filtered = jobs.filter(
-          (obj) => obj.id != 0 && filters.continents.includes(obj.department_id)
+          (obj) =>
+            obj.id !== 0 && filters.continents.includes(obj.department_id)
         );
         this.setState({
           jobsList: filtered,
@@ -160,7 +151,7 @@ class AllJob extends Component {
       }
 
       showFilteredResults(newFilters);
-      this.state.Filters = newFilters;
+      this.setState({ Filters: newFilters });
     };
     return (
       <div>

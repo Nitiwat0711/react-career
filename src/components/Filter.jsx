@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Checkbox, Typography } from "antd";
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 const departmentOptions = [
   {

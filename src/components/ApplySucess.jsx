@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-import {
-  CheckCircleFilled,
-  CheckCircleTwoTone,
-  HomeOutlined,
-} from "@ant-design/icons";
-import { Typography, message, Button } from "antd";
+import { CheckCircleTwoTone } from "@ant-design/icons";
+import { Typography, Button } from "antd";
 import { Link } from "react-router-dom";
 
 const { Title } = Typography;
