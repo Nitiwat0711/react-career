@@ -1,0 +1,32 @@
+.listFilter {
+  padding-left: 2rem;
+  height: 100vh;
+}
+
+.filterButton {
+  border-radius: 20px;
+}
+
+@media (min-width: 992px) {
+  .filterButton {
+    display: none;
+  }
+  .jobListMobile {
+    display: none;
+  }
+  #resultItem {
+    font-size: 20px;
+  }
+  .drawerFilter {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .jobList {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+}

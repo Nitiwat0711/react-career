@@ -252,7 +252,11 @@ const ApplyForm = (props) => {
               },
             ]}
           >
-            <DatePicker format="DD-MM-YYYY" disabled={disabledInput} />
+            <DatePicker
+              format="DD-MM-YYYY"
+              disabled={disabledInput}
+              placeholder="วว-ดด-ปปปป(ค.ศ.)"
+            />
           </Form.Item>
           <Title level={4}>ประวัติส่วนตัว</Title>
           <Form.Item

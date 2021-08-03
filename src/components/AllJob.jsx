@@ -4,13 +4,18 @@ import {
   Typography,
   Layout,
   Row,
+  Col,
   Card,
   Button,
   Pagination,
   Skeleton,
+  Space,
+  Drawer,
 } from "antd";
 import { Link } from "react-router-dom";
 import Filter from "./Filter";
+import "../styles/AllJob.css";
+import { FilterOutlined, HomeOutlined } from "@ant-design/icons";
 
 const { Title, Text } = Typography;
 const { Header, Sider, Content } = Layout;
@@ -26,27 +31,35 @@ const contentStyle = {
 
 const siderStyle = {
   paddingTop: "1rem",
-  paddingLeft: "2rem",
+  // paddingLeft: "2rem",
   background: "#D8D8D8",
-  width: "10rem !importtant",
 };
 
 const headerStyle = {
   background: "#ffffff",
-  paddingTop: "1rem",
-  paddingLeft: "3rem",
+  paddingTop: "10px",
+  paddingLeft: "30px",
 };
 
 const contentDetailStyle = {
-  paddingLeft: "3rem",
-  paddingRight: "3rem",
+  paddingLeft: "30px",
+  paddingRight: "30px",
   background: "#ffffff",
-  paddingBottom: "5rem",
+  paddingBottom: "50px",
 };
 
 const jobListStyle = {
   marginTop: 16,
   fontSize: "16px",
+  borderRadius: "10px",
+  background: "#C1EAF3",
+  borderStyle: "solid",
+  borderWidth: "1px",
+  borderColor: "#41747F",
+};
+
+const jobListStyleMobile = {
+  marginTop: 16,
   borderRadius: "10px",
   background: "#C1EAF3",
   borderStyle: "solid",
@@ -74,6 +87,7 @@ class AllJob extends Component {
     Filters: {
       continents: [],
     },
+    drawerVisible: false,
   };
 
   onChange = (checked) => {
@@ -147,9 +161,6 @@ class AllJob extends Component {
       const newFilters = { ...Filters };
       newFilters[category] = filters;
 
-      if (category === "price") {
-      }
-
       showFilteredResults(newFilters);
       this.setState({ Filters: newFilters });
     };
@@ -166,26 +177,59 @@ class AllJob extends Component {
         {/* <p>{JSON.stringify(this.state.jobsList)}</p> */}
         <Layout>
           <Sider
+            className="sidebar"
             theme="light"
             style={siderStyle}
-            breakpoint="lg"
-            collapsedWidth="0"
+            breakpoint={"lg"}
+            collapsedWidth={0}
+            trigger={null}
           >
-            <Row>
-              <Text strong>ตัวกรอง</Text>
-            </Row>
-            <Filter
-              handleFilters={(filters) => handleFilters(filters, "continents")}
-            />
+            <div className="listFilter">
+              <Row>
+                <Text strong>ตัวกรอง</Text>
+              </Row>
+              <Filter
+                handleFilters={(filters) =>
+                  handleFilters(filters, "continents")
+                }
+              />
+            </div>
           </Sider>
           <Layout>
             <Header style={headerStyle}>
               {this.state.jobsList.length === 0 ? (
                 <Skeleton active />
               ) : (
-                <Title level={3}>
-                  Result: {this.state.jobsList.length} items
-                </Title>
+                <Row align="medium">
+                  <Col span={10}>
+                    <Text id="resultItem">
+                      Result : {this.state.jobsList.length} items
+                    </Text>
+                  </Col>
+                  <Col span={6} offset={7} style={{ textAlign: "right" }}>
+                    <Button
+                      className="filterButton"
+                      icon={<FilterOutlined />}
+                      onClick={() => this.setState({ drawerVisible: true })}
+                    >
+                      ตัวกรอง
+                    </Button>
+                    <Drawer
+                      title="ตัวกรอง"
+                      className="drawerFilter"
+                      placement="right"
+                      onClose={() => this.setState({ drawerVisible: false })}
+                      visible={this.state.drawerVisible}
+                      width={"90%"}
+                    >
+                      <Filter
+                        handleFilters={(filters) =>
+                          handleFilters(filters, "continents")
+                        }
+                      />
+                    </Drawer>
+                  </Col>
+                </Row>
               )}
             </Header>
             <Content style={contentDetailStyle}>
@@ -196,30 +240,72 @@ class AllJob extends Component {
                 (job, index) =>
                   index >= this.state.minIndex &&
                   index < this.state.maxIndex && (
-                    <Card
-                      hoverable
-                      size="small"
-                      style={jobListStyle}
-                      key={job.id}
-                      title={
-                        <Title level={4}>{job.job_position.toString()}</Title>
-                      }
-                      extra={
-                        <Link to={`/job/${job.id}`}>
-                          <Button type="link" style={{ fontSize: "16px" }}>
-                            ดูรายละเอียด
-                          </Button>
+                    <>
+                      <div className="jobList">
+                        <Link
+                          to={`/job/${job.id}`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Card
+                            hoverable
+                            size="small"
+                            style={jobListStyle}
+                            key={job.id}
+                            title={
+                              <Title level={4}>
+                                {job.job_position.toString()}
+                              </Title>
+                            }
+                            // extra={
+                            //   <Link to={`/job/${job.id}`}>
+                            //     <Button type="link" style={{ fontSize: "16px" }}>
+                            //       ดูรายละเอียด
+                            //     </Button>
+                            //   </Link>
+                            // }
+                          >
+                            <Text strong>Job Highlights</Text>
+                            <br />
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: job.job_highlights.toString(),
+                              }}
+                            ></div>
+                          </Card>
                         </Link>
-                      }
-                    >
-                      <Text strong>Job Highlights</Text>
-                      <br />
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: job.job_highlights.toString(),
-                        }}
-                      ></div>
-                    </Card>
+                      </div>
+
+                      <div className="jobListMobile">
+                        <Link
+                          to={`/job/${job.id}`}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Card
+                            hoverable
+                            key={job.id}
+                            style={jobListStyleMobile}
+                            size="small"
+                          >
+                            <Title level={5}>
+                              {job.job_position.toString()}
+                            </Title>
+                            {/* <Space align="end"> */}
+                            <HomeOutlined
+                              style={{
+                                display: "inline-block",
+                                verticalAlign: "middle",
+                              }}
+                            />
+                            &nbsp;
+                            <Text>
+                              Type : {job.job_type} | Experience :
+                              {job.years_of_experience}
+                            </Text>
+                            {/* </Space> */}
+                          </Card>
+                        </Link>
+                      </div>
+                    </>
                   )
               )}
               <div
