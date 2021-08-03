@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-career/static/css/main.e0f4c4b7.chunk.css",
-    "main.js": "/react-career/static/js/main.af4f1a6b.chunk.js",
-    "main.js.map": "/react-career/static/js/main.af4f1a6b.chunk.js.map",
-    "runtime-main.js": "/react-career/static/js/runtime-main.ddbdebf2.js",
-    "runtime-main.js.map": "/react-career/static/js/runtime-main.ddbdebf2.js.map",
+    "main.css": "/react-career/static/css/main.f2883f97.chunk.css",
+    "main.js": "/react-career/static/js/main.3f1c8950.chunk.js",
+    "main.js.map": "/react-career/static/js/main.3f1c8950.chunk.js.map",
+    "runtime-main.js": "/react-career/static/js/runtime-main.2e059ad8.js",
+    "runtime-main.js.map": "/react-career/static/js/runtime-main.2e059ad8.js.map",
     "static/css/2.f8ed7361.chunk.css": "/react-career/static/css/2.f8ed7361.chunk.css",
-    "static/js/2.6211062e.chunk.js": "/react-career/static/js/2.6211062e.chunk.js",
-    "static/js/2.6211062e.chunk.js.map": "/react-career/static/js/2.6211062e.chunk.js.map",
-    "static/js/3.9e244d5d.chunk.js": "/react-career/static/js/3.9e244d5d.chunk.js",
-    "static/js/3.9e244d5d.chunk.js.map": "/react-career/static/js/3.9e244d5d.chunk.js.map",
+    "static/js/2.abb1878d.chunk.js": "/react-career/static/js/2.abb1878d.chunk.js",
+    "static/js/2.abb1878d.chunk.js.map": "/react-career/static/js/2.abb1878d.chunk.js.map",
+    "static/js/3.8be00cc3.chunk.js": "/react-career/static/js/3.8be00cc3.chunk.js",
+    "static/js/3.8be00cc3.chunk.js.map": "/react-career/static/js/3.8be00cc3.chunk.js.map",
     "index.html": "/react-career/index.html",
     "static/css/2.f8ed7361.chunk.css.map": "/react-career/static/css/2.f8ed7361.chunk.css.map",
-    "static/css/main.e0f4c4b7.chunk.css.map": "/react-career/static/css/main.e0f4c4b7.chunk.css.map",
-    "static/js/2.6211062e.chunk.js.LICENSE.txt": "/react-career/static/js/2.6211062e.chunk.js.LICENSE.txt"
+    "static/css/main.f2883f97.chunk.css.map": "/react-career/static/css/main.f2883f97.chunk.css.map",
+    "static/js/2.abb1878d.chunk.js.LICENSE.txt": "/react-career/static/js/2.abb1878d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddbdebf2.js",
+    "static/js/runtime-main.2e059ad8.js",
     "static/css/2.f8ed7361.chunk.css",
-    "static/js/2.6211062e.chunk.js",
-    "static/css/main.e0f4c4b7.chunk.css",
-    "static/js/main.af4f1a6b.chunk.js"
+    "static/js/2.abb1878d.chunk.js",
+    "static/css/main.f2883f97.chunk.css",
+    "static/js/main.3f1c8950.chunk.js"
   ]
 }
