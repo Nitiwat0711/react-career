@@ -33,9 +33,12 @@
 }
 
 .ant-btn-primary {
-  border-radius: 20px;
   min-width: 120px;
   background-color: #00ccbc;
   border-color: #00ccbc;
   font-weight: bold;
+}
+
+.ant-btn {
+  border-radius: 20px;
 }

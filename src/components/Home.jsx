@@ -26,11 +26,11 @@ class Home extends Component {
         <Slidebar></Slidebar>
         <div className="Life">
           <h3>LIFE AT COMBUY</h3>
-          <Row className="LifeDetail" justify="space-between">
+          <Row className="LifeDetail" justify="space-around">
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 260 }}
+                style={{ width: 300 }}
                 cover={
                   <>
                     <img
@@ -61,7 +61,7 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 260 }}
+                style={{ width: 300 }}
                 cover={
                   <>
                     <img
@@ -91,7 +91,7 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 260 }}
+                style={{ width: 300 }}
                 cover={
                   <>
                     <img
@@ -119,7 +119,7 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 260 }}
+                style={{ width: 300 }}
                 cover={
                   <>
                     <img

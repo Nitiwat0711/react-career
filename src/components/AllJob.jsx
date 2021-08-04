@@ -156,11 +156,20 @@ class AllJob extends Component {
       }
     };
     const handleFilters = (filters, category) => {
-      // console.log(filters);
+      console.log(filters);
 
       const newFilters = { ...Filters };
       newFilters[category] = filters;
 
+      showFilteredResults(newFilters);
+      this.setState({ Filters: newFilters });
+    };
+
+    const clearFilters = () => {
+      console.log("clear");
+      const newFilters = { ...Filters };
+      newFilters["continents"] = [];
+      console.log(newFilters);
       showFilteredResults(newFilters);
       this.setState({ Filters: newFilters });
     };
@@ -174,7 +183,6 @@ class AllJob extends Component {
           </div>
         </Carousel>
 
-        {/* <p>{JSON.stringify(this.state.jobsList)}</p> */}
         <Layout>
           <Sider
             className="sidebar"
@@ -206,7 +214,7 @@ class AllJob extends Component {
                       Result : {this.state.jobsList.length} items
                     </Text>
                   </Col>
-                  <Col span={6} offset={7} style={{ textAlign: "right" }}>
+                  <Col span={6} offset={6} style={{ textAlign: "right" }}>
                     <Button
                       className="filterButton"
                       icon={<FilterOutlined />}
@@ -221,12 +229,27 @@ class AllJob extends Component {
                       onClose={() => this.setState({ drawerVisible: false })}
                       visible={this.state.drawerVisible}
                       width={"90%"}
+                      closable={false}
                     >
                       <Filter
                         handleFilters={(filters) =>
                           handleFilters(filters, "continents")
                         }
                       />
+                      <div
+                        className="filterOption"
+                        style={{ textAlign: "center" }}
+                      >
+                        <Button
+                          type="primary"
+                          style={{ width: "80%", marginBottom: 10 }}
+                          onClick={() =>
+                            this.setState({ drawerVisible: false })
+                          }
+                        >
+                          ยืนยัน
+                        </Button>
+                      </div>
                     </Drawer>
                   </Col>
                 </Row>
@@ -298,7 +321,7 @@ class AllJob extends Component {
                             />
                             &nbsp;
                             <Text>
-                              Type : {job.job_type} | Experience :
+                              Type : {job.job_type} | Experience : &nbsp;
                               {job.years_of_experience}
                             </Text>
                             {/* </Space> */}

@@ -1,0 +1,11 @@
+@media (min-width: 992px) {
+  .clearFilterMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .clearFilterfull {
+    display: none;
+  }
+}

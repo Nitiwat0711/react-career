@@ -1,38 +1,44 @@
 import React, { useState } from "react";
-import { Checkbox, Typography } from "antd";
+import { Checkbox, Typography, Button, Row, Col, Space } from "antd";
+import "../styles/filter.css";
 
 const { Text } = Typography;
 
 const departmentOptions = [
   {
-    id: 0,
-    option: "ทั้งหมด",
-  },
-  {
     id: 1,
-    option: "ฝ่ายการตลาด",
+    option: "การตลาด",
   },
   {
     id: 2,
-    option: "ฝ่ายบัญชี",
+    option: "บัญชี",
   },
   {
     id: 3,
-    option: "ฝ่ายทรัพยากรบุคคล",
+    option: "ทรัพยากรบุคคล",
   },
   {
     id: 4,
-    option: "ฝ่าย IT",
+    option: "IT",
+  },
+  {
+    id: 5,
+    option: "จัดซื้อ",
+  },
+  {
+    id: 6,
+    option: "ประชาสัมพันธ์",
   },
 ];
 
 const Filter = (props) => {
-  const [Checked, setChecked] = useState([0]);
+  const [Checked, setChecked] = useState([]);
 
   const handleToggle = (value) => {
     const currentIndex = Checked.indexOf(value);
     const newChecked = [...Checked];
-
+    console.log("value", value);
+    console.log("check", Checked);
     if (currentIndex === -1) {
       newChecked.push(value);
     } else {
@@ -45,6 +51,22 @@ const Filter = (props) => {
 
   return (
     <div>
+      <Space align="baseline">
+        <Text>ฝ่ายงาน</Text>
+        <div className="clearFilterfull">
+          <Button
+            type="link"
+            danger
+            onClick={() => {
+              setChecked([]);
+              props.handleFilters([]);
+            }}
+          >
+            ล้างทั้งหมด
+          </Button>
+        </div>
+      </Space>
+      <br />
       {departmentOptions.map((value, index) => (
         <React.Fragment key={index}>
           <Checkbox
@@ -56,6 +78,19 @@ const Filter = (props) => {
           <br />
         </React.Fragment>
       ))}
+
+      <div className="clearFilterMobile" style={{ textAlign: "center" }}>
+        <Button
+          danger
+          style={{ marginBottom: 10, marginTop: 10, width: "80%" }}
+          onClick={() => {
+            setChecked([]);
+            props.handleFilters([]);
+          }}
+        >
+          ล้างทั้งหมด
+        </Button>
+      </div>
     </div>
   );
 };
