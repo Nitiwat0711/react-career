@@ -1,9 +1,6 @@
 .Life {
-  /* margin-top: 1rem; */
-  /* padding: 2.5rem; */
   padding: 20px;
-  /* padding-left: rem; */
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
 
 .LifeDetail {
@@ -33,4 +30,14 @@ Col {
 #DetailCard {
   background-color: #d4d4d4;
   border-radius: 18px;
+}
+
+@media (min-width: 379px) {
+  #LifeAtTitle {
+    padding-left: 20px;
+  }
+
+  #WhyTitle {
+    padding-left: 20px;
+  }
 }

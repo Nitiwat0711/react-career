@@ -25,12 +25,20 @@ class Home extends Component {
       <div>
         <Slidebar></Slidebar>
         <div className="Life">
-          <h3>LIFE AT COMBUY</h3>
-          <Row className="LifeDetail" justify="space-around">
+          <h3 id="LifeAtTitle">LIFE AT COMBUY</h3>
+          <Row
+            className="LifeDetail"
+            justify="space-around"
+            style={{ paddingTop: "5px" }}
+          >
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 300 }}
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: 300,
+                }}
                 cover={
                   <>
                     <img
@@ -60,7 +68,11 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 300 }}
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: 300,
+                }}
                 cover={
                   <>
                     <img
@@ -90,7 +102,11 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 300 }}
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: 300,
+                }}
                 cover={
                   <>
                     <img
@@ -118,7 +134,11 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 hoverable
-                style={{ width: 300 }}
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: 300,
+                }}
                 cover={
                   <>
                     <img
@@ -149,12 +169,17 @@ class Home extends Component {
         </div>
 
         <div className="Life">
-          <h3>WHY COMBUY?</h3>
-          <Row className="LifeDetail">
+          <h3 id="WhyTitle">WHY COMBUY?</h3>
+          <Row className="LifeDetail" style={{ paddingTop: "5px" }}>
             <Col lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
-                style={{ width: 260, height: 450 }}
+                style={{
+                  width: 260,
+                  height: 450,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
                 hoverable
               >
                 {this.state.loadingIcon ? (
@@ -183,7 +208,12 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
-                style={{ width: 260, height: 450 }}
+                style={{
+                  width: 260,
+                  height: 450,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
                 hoverable
               >
                 <ion-icon style={{ fontSize: "128px" }} name="heart"></ion-icon>
@@ -199,7 +229,12 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
-                style={{ width: 260, height: 450 }}
+                style={{
+                  width: 260,
+                  height: 450,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
                 hoverable
               >
                 <ion-icon
@@ -219,7 +254,12 @@ class Home extends Component {
             <Col lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
-                style={{ width: 260, height: 450 }}
+                style={{
+                  width: 260,
+                  height: 450,
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
                 hoverable
               >
                 <ion-icon
