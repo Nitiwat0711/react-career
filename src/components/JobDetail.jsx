@@ -29,7 +29,6 @@ class JobDetail extends Component {
   async componentDidMount() {
     const jobId = this.props.match.params.jobId;
     const url = process.env.REACT_APP_API_URL + "/apis/job/" + jobId;
-    // const response = await fetch(url);
     await fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -54,11 +53,6 @@ class JobDetail extends Component {
       .catch((err) => {
         console.log(err.message);
       });
-    // const data = await response.json();
-
-    // console.log(data[0].job_position);
-    // console.log(url);
-    // console.log(this.state.job);
   }
 
   render() {

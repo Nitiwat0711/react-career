@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Carousel, Typography, Skeleton, Row, Col } from "antd";
+import "../styles/internship.css";
 
 const { Title, Text, Link } = Typography;
 
@@ -33,10 +34,7 @@ class Internship extends Component {
             </Title>
           </div>
         </Carousel>
-        <div
-          className="content"
-          style={{ padding: "3rem", backgroundColor: "#f0f0f0" }}
-        >
+        <div className="InternshipContent">
           {this.state.isLoading ? (
             <Skeleton active />
           ) : (
@@ -55,12 +53,12 @@ class Internship extends Component {
                   />
                   {this.state.loadingImage && (
                     <Skeleton.Image
-                      style={{ width: 260, height: 175, maxWidth: "500px" }}
+                      style={{ width: 350, height: 175, maxWidth: "500px" }}
                     />
                   )}
                 </Col>
-                <Col md={12} style={{ paddingLeft: "1rem" }}>
-                  <Title level={3}>
+                <Col md={12} className="InternImageDetail">
+                  <Title level={3} id="InternshipImageTitle">
                     Est tation latine aliquip id, mea ad tale illud
                     definitiones. Periculis omittantur necessitatibus eum ad,
                     pro eripuit minimum comprehensam ne, usu cu stet prompta
@@ -69,7 +67,7 @@ class Internship extends Component {
                 </Col>
               </Row>
               <Row>
-                <Col md={12} style={{ paddingRight: "5rem" }}>
+                <Col className="InternshipReceive" md={12}>
                   <Title level={3}>ฝึกงานที่นี่ได้อะไรบ้าง</Title>
                   <Text>
                     At eripuit signiferumque sea, vel ad mucius molestie, cu
@@ -91,7 +89,7 @@ class Internship extends Component {
                     molestie, cu labitur.
                   </Text>
                 </Col>
-                <Col md={12} style={{ paddingRight: "3rem" }}>
+                <Col md={12} className="InternshipSpecification">
                   <Title level={3}>คุณสมบัติผู้มาฝึกงาน</Title>
                   <ul>
                     <li>
@@ -143,12 +141,13 @@ class Internship extends Component {
               maxHeight: "200px",
             }}
           >
-            <Text style={{ color: "#FFFFFF", fontSize: "30px" }}>
+            <Text style={{ color: "#FFFFFF" }} id="InternContactDetail">
               ติดต่อฝึกงานหรือสหกิจศึกษา และส่ง Resume ได้ที่ คุณ abcd efghijkl
             </Text>
             <br></br>
             <Link
-              style={{ color: "#FFFFFF", fontSize: "30px" }}
+              id="IternContactMail"
+              style={{ color: "#FFFFFF" }}
               href="mailto:abcd_hr@mycombuy.com"
             >
               abcd_hr@mycombuy.com

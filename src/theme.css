@@ -24896,35 +24896,22 @@ div.ant-typography-edit-content.ant-typography-rtl {
 
 .App {
   font-family: "Prompt", sans-serif;
+  font-size: 16px;
 }
 
-/* .ant-form-item-label > label {
+.ant-form-item-label > label {
   font-weight: bold;
 }
 
-.ant-checkbox-checked .ant-checkbox-inner {
-  background-color: #00d3a8;
-  border-color: #00d3a8;
+.ant-pagination-prev {
+  border-radius: 20px;
 }
-
-.ant-checkbox {
-  background: #ffffff;
-  border-color: #cdcdcd;
-  border-radius: 3px;
-}
-
 .ant-pagination-item {
   border-radius: 20px;
-  border-color: #00d3a8;
 }
-
 .ant-pagination-item-active {
   border-radius: 20px;
-  background-color: #00d3a8;
-  border-color: #00d3a8;
-  color: #ffffff;
-} */
-
+}
 .ant-btn-primary {
   min-width: 120px;
   font-weight: bold;

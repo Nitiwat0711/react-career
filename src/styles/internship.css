@@ -1,0 +1,42 @@
+.InternContact {
+  font-size: 30px;
+}
+
+.InternshipContent {
+  padding-top: 2rem;
+  background-color: #f0f0f0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  .InternshipSpecification {
+    padding-right: 3rem;
+  }
+  .InternshipReceive {
+    padding-left: 4rem;
+    padding-right: 5rem;
+  }
+  .InternImageDetail {
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #InternContact {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #InternContactDetail {
+    font-size: 16px;
+  }
+  #IternContactMail {
+    font-size: 16px;
+  }
+  #InternshipImageTitle {
+    font-size: 20px;
+    text-align: center;
+  }
+}
