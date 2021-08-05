@@ -280,7 +280,7 @@ class Home extends Component {
         </div>
 
         <div className="Quote">
-          <Title level={2}>
+          <Title id="QuoteText" level={2}>
             "At eripuit signiferumque sea, vel ad mucius molestie, cu labitur."
           </Title>
         </div>
