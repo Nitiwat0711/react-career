@@ -427,7 +427,9 @@ const ApplyForm = (props) => {
                       name={[name, "GPA"]}
                       label="GPA"
                       fieldKey={[fieldKey, "GPA"]}
-                      rules={[{ required: requiredBool }]}
+                      rules={[
+                        { required: requiredBool, message: "*กรุณาระบุ GPA" },
+                      ]}
                     >
                       <InputNumber
                         step="0.01"
@@ -761,7 +763,7 @@ const ApplyForm = (props) => {
           <Title level={4}>บุคคลที่สามารถติดต่อได้ในกรณีฉุกเฉิน</Title>
           <Form.Item
             name={["user", "personToNotifyFullname"]}
-            label="ชื่อ- นามสกุล"
+            label="ชื่อ - นามสกุล"
             rules={[{ required: requiredBool }]}
           >
             <Input disabled={disabledInput} />
@@ -784,7 +786,7 @@ const ApplyForm = (props) => {
           <Form.Item
             name={["user", "cv"]}
             label="CV (.pdf)"
-            rules={[{ required: requiredBool }]}
+            rules={[{ required: requiredBool, message: "*กรุณาอัพโหลด CV" }]}
           >
             <Upload {...uploadPdfFile} disabled={disabledInput}>
               <Button icon={<UploadOutlined disabled={disabledInput} />}>

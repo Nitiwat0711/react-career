@@ -14,15 +14,7 @@ const contentStyle = {
 
 class Internship extends Component {
   state = {
-    address: [],
-    // options: null,
-    options: [],
-    isLoading: true,
-    searchTerm: "",
-    sub_district: "",
-    district: "",
-    province: "",
-    zip_code: "",
+    loadingImage: true,
   };
 
   async componentDidMount() {
@@ -54,8 +46,18 @@ class Internship extends Component {
                   <img
                     src="internship.jpg"
                     alt=""
-                    style={{ width: "100%", maxWidth: "500px" }}
+                    style={
+                      this.state.loadingImage
+                        ? { display: "none" }
+                        : { width: "100%", maxWidth: "500px" }
+                    }
+                    onLoad={() => this.setState({ loadingImage: false })}
                   />
+                  {this.state.loadingImage && (
+                    <Skeleton.Image
+                      style={{ width: 260, height: 175, maxWidth: "500px" }}
+                    />
+                  )}
                 </Col>
                 <Col md={12} style={{ paddingLeft: "1rem" }}>
                   <Title level={3}>

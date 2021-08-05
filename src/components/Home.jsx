@@ -38,7 +38,6 @@ class Home extends Component {
                       alt="example"
                       src="Job4_small.jpg"
                       onLoad={() => this.setState({ loadingImage1: false })}
-                      on
                     />
                     {loadingImage1 && (
                       <Skeleton.Image style={{ width: 260, height: 175 }} />

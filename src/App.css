@@ -10,6 +10,9 @@
   font-weight: bold;
 }
 
+.ant-pagination-prev {
+  border-radius: 20px;
+}
 .ant-pagination-item {
   border-radius: 20px;
 }
