@@ -53,18 +53,6 @@ const Filter = (props) => {
     <div>
       <Space align="baseline">
         <Text>ฝ่ายงาน</Text>
-        <div className="clearFilterfull">
-          <Button
-            type="link"
-            danger
-            onClick={() => {
-              setChecked([]);
-              props.handleFilters([]);
-            }}
-          >
-            ล้างทั้งหมด
-          </Button>
-        </div>
       </Space>
       <br />
       {departmentOptions.map((value, index) => (
@@ -78,6 +66,19 @@ const Filter = (props) => {
           <br />
         </React.Fragment>
       ))}
+
+      <div className="clearFilterfull" style={{ textAlign: "right" }}>
+        <Button
+          type="link"
+          onClick={() => {
+            setChecked([]);
+            props.handleFilters([]);
+          }}
+          style={{ color: "#C20000" }}
+        >
+          ล้างทั้งหมด
+        </Button>
+      </div>
 
       <div className="clearFilterMobile" style={{ textAlign: "center" }}>
         <Button

@@ -32,7 +32,7 @@ const contentStyle = {
 const siderStyle = {
   paddingTop: "1rem",
   // paddingLeft: "2rem",
-  background: "#D8D8D8",
+  background: "#DEDEDE",
 };
 
 const headerStyle = {
@@ -229,7 +229,6 @@ class AllJob extends Component {
                       onClose={() => this.setState({ drawerVisible: false })}
                       visible={this.state.drawerVisible}
                       width={"90%"}
-                      closable={false}
                     >
                       <Filter
                         handleFilters={(filters) =>
