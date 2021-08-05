@@ -252,11 +252,7 @@ const ApplyForm = (props) => {
               },
             ]}
           >
-            <DatePicker
-              format="DD-MM-YYYY"
-              disabled={disabledInput}
-              placeholder="วว-ดด-ปปปป(ค.ศ.)"
-            />
+            <DatePicker format="DD-MM-YYYY" disabled={disabledInput} />
           </Form.Item>
           <Title level={4}>ประวัติส่วนตัว</Title>
           <Form.Item
@@ -829,7 +825,7 @@ const ApplyForm = (props) => {
           <Form.Item name={["user", "linkedinLink"]} label="Linkedin Link">
             <Input disabled={disabledInput} />
           </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 17 }}>
+          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 15 }}>
             {disabledInput ? (
               <Space>
                 <Button

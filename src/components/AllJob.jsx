@@ -211,12 +211,12 @@ class AllJob extends Component {
                 <Row align="medium">
                   <Col span={10}>
                     <Text id="resultItem">
-                      Result : {this.state.jobsList.length} items
+                      ค้นพบ : {this.state.jobsList.length} รายการ
                     </Text>
                   </Col>
                   <Col span={6} offset={6} style={{ textAlign: "right" }}>
                     <Button
-                      className="filterButton"
+                      id="filterButton"
                       icon={<FilterOutlined />}
                       onClick={() => this.setState({ drawerVisible: true })}
                     >

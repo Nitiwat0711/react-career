@@ -3,12 +3,8 @@
   height: 100vh;
 }
 
-.filterButton {
-  border-radius: 20px;
-}
-
 @media (min-width: 992px) {
-  .filterButton {
+  #filterButton {
     display: none;
   }
   .jobListMobile {
@@ -16,9 +12,6 @@
   }
   #resultItem {
     font-size: 20px;
-  }
-  .drawerFilter {
-    width: 100%;
   }
 }
 
