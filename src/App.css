@@ -3,6 +3,7 @@
 
 .App {
   font-family: "Prompt", sans-serif;
+  font-size: 16px;
 }
 
 .ant-form-item-label > label {
@@ -15,7 +16,7 @@
 .ant-pagination-item-active {
   border-radius: 20px;
 }
-*/ .ant-btn-primary {
+.ant-btn-primary {
   min-width: 120px;
   font-weight: bold;
 }

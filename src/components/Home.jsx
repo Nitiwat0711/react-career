@@ -154,7 +154,7 @@ class Home extends Component {
           <Row className="LifeDetail">
             <Col lg={6} md={12} xs={24}>
               <Card
-                className="DetailCard"
+                id="DetailCard"
                 style={{ width: 260, height: 450 }}
                 hoverable
               >
@@ -183,7 +183,7 @@ class Home extends Component {
             </Col>
             <Col lg={6} md={12} xs={24}>
               <Card
-                className="DetailCard"
+                id="DetailCard"
                 style={{ width: 260, height: 450 }}
                 hoverable
               >
@@ -199,7 +199,7 @@ class Home extends Component {
             </Col>
             <Col lg={6} md={12} xs={24}>
               <Card
-                className="DetailCard"
+                id="DetailCard"
                 style={{ width: 260, height: 450 }}
                 hoverable
               >
@@ -219,7 +219,7 @@ class Home extends Component {
             </Col>
             <Col lg={6} md={12} xs={24}>
               <Card
-                className="DetailCard"
+                id="DetailCard"
                 style={{ width: 260, height: 450 }}
                 hoverable
               >
