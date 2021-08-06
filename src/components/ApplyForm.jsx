@@ -838,10 +838,7 @@ const ApplyForm = (props) => {
           <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 15 }}>
             {disabledInput ? (
               <Space>
-                <Button
-                  onClick={onGoBack}
-                  style={{ borderRadius: 20, fontWeight: "bold" }}
-                >
+                <Button onClick={onGoBack}>
                   <ArrowLeftOutlined />
                   กลับไปแก้ไขข้อมูล
                 </Button>

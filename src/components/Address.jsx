@@ -91,7 +91,7 @@ const Address = (props) => {
           value={subDistrict}
           disabled={props.disabledInputToChild}
         >
-          <Input.Search placeholder="กรอกตำบล/แขวง หรืออำเภอ/เขต หรือจังหวัด หรือ รหัสไปรษณีย์" />
+          <Input.Search placeholder="ค้นหาตำบล/แขวง หรืออำเภอ/เขต หรือจังหวัด หรือ รหัสไปรษณีย์" />
         </AutoComplete>
       </Form.Item>
       {/* <Form.Item

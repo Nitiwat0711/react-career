@@ -48,7 +48,7 @@ class Home extends Component {
                       onLoad={() => this.setState({ loadingImage1: false })}
                     />
                     {loadingImage1 && (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                      <Skeleton.Image style={{ width: 300, height: 175 }} />
                     )}
                   </>
                 }
@@ -84,7 +84,7 @@ class Home extends Component {
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
                     {this.state.loadingImage2 && (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                      <Skeleton.Image style={{ width: 300, height: 175 }} />
                     )}
                   </>
                 }
@@ -116,7 +116,7 @@ class Home extends Component {
                       onLoad={() => this.setState({ loadingImage1: false })}
                     />
                     {this.state.loadingImage1 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                      <Skeleton.Image style={{ width: 300, height: 175 }} />
                     ) : null}
                   </>
                 }
@@ -150,7 +150,7 @@ class Home extends Component {
                       onLoad={() => this.setState({ loadingImage2: false })}
                     />
                     {this.state.loadingImage2 ? (
-                      <Skeleton.Image style={{ width: 260, height: 175 }} />
+                      <Skeleton.Image style={{ width: 300, height: 175 }} />
                     ) : null}
                   </>
                 }
