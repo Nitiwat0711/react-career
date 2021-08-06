@@ -7,10 +7,8 @@ const { Title, Text } = Typography;
 const contentStyle = {
   height: "350px",
   color: "#fff",
-  lineHeight: "350px",
   textAlign: "center",
   background: "#00ccbc",
-  margin: "0",
 };
 
 class JobDetail extends Component {
@@ -58,13 +56,16 @@ class JobDetail extends Component {
   render() {
     return (
       <div>
-        <Carousel>
-          <div>
-            <Title level={1} style={contentStyle}>
-              {this.state.jobPosition}
-            </Title>
-          </div>
-        </Carousel>
+        <div className="headerDetail" style={contentStyle}>
+          <Carousel>
+            <div>
+              <Title level={1} id="jobDetailTitle">
+                {this.state.jobPosition}
+              </Title>
+            </div>
+          </Carousel>
+        </div>
+
         {this.state.isLoading ? (
           <div className="container">
             <Skeleton

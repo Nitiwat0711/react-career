@@ -4,3 +4,23 @@
   padding-right: 10rem; */
   min-height: 100vh;
 }
+
+#jobDetailTitle {
+  color: #fff;
+  line-height: 70px;
+  margin-top: 7rem;
+  text-align: center;
+}
+@media (max-width: 1300px) {
+  #jobDetailTitle {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #jobDetailTitle {
+    font-size: 24px;
+    line-height: 50px;
+  }
+}

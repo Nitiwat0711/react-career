@@ -28,7 +28,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { useRef } from "react";
 
 const { Option } = Select;
-const { Title } = Typography;
+const { Title, Text } = Typography;
 
 const requiredBool = true;
 
@@ -42,13 +42,20 @@ const layout = {
 };
 /* eslint-disable no-template-curly-in-string */
 
+const buttonFormLayout = {
+  wrapperCol: {
+    md: {
+      span: 12,
+      offset: 6,
+    },
+  },
+};
+
 const contentStyle = {
   height: "350px",
   color: "#fff",
-  // lineHeight: "350px",
   textAlign: "center",
   background: "#00ccbc",
-  margin: "0",
 };
 
 const validateMessages = {
@@ -97,6 +104,7 @@ const ApplyForm = (props) => {
   let history = useHistory();
   const [jobId, setJobID] = React.useState(null);
   const [jobPos, setJobPos] = React.useState();
+  const [applyTitle, setapplyTitle] = React.useState("Loading...");
   const reRef = useRef();
   const [disabledInput, setdisabledInput] = React.useState(false);
   useEffect(() => {
@@ -116,6 +124,7 @@ const ApplyForm = (props) => {
         .then((job) => {
           setJobID(job[0].id);
           setJobPos(job[0].job_position);
+          setapplyTitle("สมัครตำแหน่ง : ");
         })
         .catch((err) => {
           console.log(err.message);
@@ -204,15 +213,10 @@ const ApplyForm = (props) => {
       <div className="header" style={contentStyle}>
         <Carousel>
           <div>
-            <Title
-              level={1}
-              style={{
-                color: "#fff",
-                lineHeight: "350px",
-                textAlign: "center",
-              }}
-            >
-              {disabledInput ? "ยืนยันการ" : ""}สมัครตำแหน่ง : {jobPos}
+            <Title id="jobPositionTitle" level={1}>
+              {disabledInput ? "ยืนยันการ" : ""}
+              {applyTitle}
+              <br /> {jobPos}
             </Title>
           </div>
         </Carousel>
@@ -835,7 +839,7 @@ const ApplyForm = (props) => {
           <Form.Item name={["user", "linkedinLink"]} label="Linkedin Link">
             <Input disabled={disabledInput} />
           </Form.Item>
-          <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 15 }}>
+          <Form.Item {...buttonFormLayout} style={{ textAlign: "right" }}>
             {disabledInput ? (
               <Space>
                 <Button onClick={onGoBack}>
