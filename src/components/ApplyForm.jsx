@@ -107,6 +107,25 @@ const ApplyForm = (props) => {
   const [applyTitle, setapplyTitle] = React.useState("Loading...");
   const reRef = useRef();
   const [disabledInput, setdisabledInput] = React.useState(false);
+
+  const [speakingValue, setSpeakingValue] = React.useState();
+  const [readingValue, setReadingValue] = React.useState();
+  const [writingValue, setWritingValue] = React.useState();
+  const [genderValue, setGenderValue] = React.useState();
+  const [addressValue, setAddressValue] = React.useState();
+  const [militaryValue, setMilitaryValue] = React.useState();
+  const [drivingcarValue, setDrivingCarValue] = React.useState();
+  const [drivingcarLicenseValue, setDrivingCarLicenseValue] =
+    React.useState(true);
+  const [drivingMotorcyValue, setDrivingMotorcyValue] = React.useState();
+  const [drivingMotorcyLicenseValue, setDrivingMotorcyLicenseValue] =
+    React.useState(true);
+  const [currentAddressType, setCurrentAddressType] = React.useState(true);
+  const [currentAddressOther, setcurrentAddressOther] = React.useState();
+  const [drivingCarLicenseType, setdrivingCarLicenseType] = React.useState();
+  const [drivingMortorcyLicenseType, setdrivingMortorcyLicenseType] =
+    React.useState();
+
   useEffect(() => {
     if (isSubmit) {
       history.push("/applySucess");
@@ -151,18 +170,18 @@ const ApplyForm = (props) => {
     window.scrollTo(0, 0);
   };
   const onFinish = async (values) => {
-    // setdisabledInput(true);
-    // window.scrollTo(0, 0);
     console.log(values);
 
     message.loading("Action in progress..", 0);
 
     const token = await reRef.current.executeAsync();
     reRef.current.reset();
-    // console.log(token);
     values.token = token;
     values.job = jobPos;
     values.jobId = jobId;
+    values.user.drivingCarLicenseType = drivingCarLicenseType;
+    values.user.drivingMortorcyLicenseType = drivingMortorcyLicenseType;
+    values.user.otherAddressType = currentAddressOther;
 
     fetch(`${process.env.REACT_APP_API_URL}/apis/users`, {
       method: "POST",
@@ -186,27 +205,6 @@ const ApplyForm = (props) => {
       message.success("บันทึกเสร็จสิ้น", 3);
     }, 500);
   };
-
-  const [speakingValue, setSpeakingValue] = React.useState();
-  const [readingValue, setReadingValue] = React.useState();
-  const [writingValue, setWritingValue] = React.useState();
-  const [genderValue, setGenderValue] = React.useState();
-  const [addressValue, setAddressValue] = React.useState();
-  const [militaryValue, setMilitaryValue] = React.useState();
-  const [drivingcarValue, setDrivingCarValue] = React.useState();
-  const [drivingcarLicenseValue, setDrivingCarLicenseValue] =
-    React.useState(true);
-  const [drivingMotorcyValue, setDrivingMotorcyValue] = React.useState();
-  const [drivingMotorcyLicenseValue, setDrivingMotorcyLicenseValue] =
-    React.useState(true);
-  const [currentAddressType, setCurrentAddressType] = React.useState(true);
-  const [educationList, setEducationList] = React.useState({
-    studyLevel: "",
-    academyName: "",
-    yearOfSuccess: "",
-    studyDepartment: "",
-    GPA: "",
-  });
 
   return (
     <>
@@ -366,6 +364,9 @@ const ApplyForm = (props) => {
                   <Input
                     disabled={currentAddressType || disabledInput}
                     style={{ width: 120, marginLeft: 10 }}
+                    onChange={(event) => {
+                      setcurrentAddressOther(event.target.value);
+                    }}
                   />
                 </Radio>
               </Space>
@@ -708,6 +709,9 @@ const ApplyForm = (props) => {
                   style={{ width: 250, marginLeft: 10 }}
                   disabled={drivingcarLicenseValue || disabledInput}
                   placeholder={"ระบุประเภทใบขับขี่"}
+                  onChange={(event) => {
+                    setdrivingCarLicenseType(event.target.value);
+                  }}
                 />
               </Radio>
             </Radio.Group>
@@ -733,6 +737,9 @@ const ApplyForm = (props) => {
                   style={{ width: 250, marginLeft: 10 }}
                   disabled={drivingMotorcyLicenseValue || disabledInput}
                   placeholder={"ระบุประเภทใบขับขี่"}
+                  onChange={(event) => {
+                    setdrivingMortorcyLicenseType(event.target.value);
+                  }}
                 />
               </Radio>
             </Radio.Group>

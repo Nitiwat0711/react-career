@@ -18,7 +18,7 @@ class Navbar extends Component {
 
           <Button
             type="text"
-            className="menuButtonMobile"
+            id="menuButtonMobile"
             style={{
               color: "#fff",
               fontSize: "16px",
