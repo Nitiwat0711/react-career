@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-career/static/css/main.6762ae46.chunk.css",
-    "main.js": "/react-career/static/js/main.d1c90c68.chunk.js",
-    "main.js.map": "/react-career/static/js/main.d1c90c68.chunk.js.map",
+    "main.css": "/react-career/static/css/main.81f4c2bc.chunk.css",
+    "main.js": "/react-career/static/js/main.e5d60453.chunk.js",
+    "main.js.map": "/react-career/static/js/main.e5d60453.chunk.js.map",
     "runtime-main.js": "/react-career/static/js/runtime-main.d260d80c.js",
     "runtime-main.js.map": "/react-career/static/js/runtime-main.d260d80c.js.map",
     "static/css/2.f8ed7361.chunk.css": "/react-career/static/css/2.f8ed7361.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.b0fbc562.chunk.js.map": "/react-career/static/js/3.b0fbc562.chunk.js.map",
     "index.html": "/react-career/index.html",
     "static/css/2.f8ed7361.chunk.css.map": "/react-career/static/css/2.f8ed7361.chunk.css.map",
-    "static/css/main.6762ae46.chunk.css.map": "/react-career/static/css/main.6762ae46.chunk.css.map",
+    "static/css/main.81f4c2bc.chunk.css.map": "/react-career/static/css/main.81f4c2bc.chunk.css.map",
     "static/js/2.734a7a0c.chunk.js.LICENSE.txt": "/react-career/static/js/2.734a7a0c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d260d80c.js",
     "static/css/2.f8ed7361.chunk.css",
     "static/js/2.734a7a0c.chunk.js",
-    "static/css/main.6762ae46.chunk.css",
-    "static/js/main.d1c90c68.chunk.js"
+    "static/css/main.81f4c2bc.chunk.css",
+    "static/js/main.e5d60453.chunk.js"
   ]
 }
