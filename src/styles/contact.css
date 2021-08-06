@@ -5,10 +5,15 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100vh;
 }
 
 .SocialMediaList {
   margin-bottom: 0.4rem;
+}
+
+.map {
+  margin-top: 3rem;
 }
 
 @media (min-width: 500px) {
@@ -28,5 +33,20 @@
 @media (max-width: 500px) {
   #MapsbyGoogle {
     height: 250px;
+  }
+}
+
+@media (min-width: 2000px) {
+  #MapsbyGoogle {
+    height: 800px;
+  }
+  .Detail {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #ColumnDetail1 {
+    padding-right: 15rem;
+    padding-left: 3rem;
   }
 }

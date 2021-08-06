@@ -34,99 +34,102 @@ class Internship extends Component {
             </Title>
           </div>
         </Carousel>
-        <div className="InternshipContent">
-          {this.state.isLoading ? (
-            <Skeleton active />
-          ) : (
-            <>
-              <Row>
-                <Col md={10} style={{ textAlign: "center" }}>
-                  <img
-                    src="internship.jpg"
-                    alt=""
-                    style={
-                      this.state.loadingImage
-                        ? { display: "none" }
-                        : { width: "100%", maxWidth: "500px" }
-                    }
-                    onLoad={() => this.setState({ loadingImage: false })}
-                  />
-                  {this.state.loadingImage && (
-                    <Skeleton.Image
-                      style={{ width: 350, height: 175, maxWidth: "500px" }}
+        <div className="internData">
+          <div className="InternshipContent">
+            {this.state.isLoading ? (
+              <Skeleton active />
+            ) : (
+              <>
+                <Row>
+                  <Col md={10} style={{ textAlign: "center" }}>
+                    <img
+                      src="internship.jpg"
+                      alt=""
+                      style={
+                        this.state.loadingImage
+                          ? { display: "none" }
+                          : { width: "100%", maxWidth: "500px" }
+                      }
+                      onLoad={() => this.setState({ loadingImage: false })}
                     />
-                  )}
-                </Col>
-                <Col md={12} className="InternImageDetail">
-                  <Title level={3} id="InternshipImageTitle">
-                    Est tation latine aliquip id, mea ad tale illud
-                    definitiones. Periculis omittantur necessitatibus eum ad,
-                    pro eripuit minimum comprehensam ne, usu cu stet prompta
-                    reformidans.
-                  </Title>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="InternshipReceive" md={12}>
-                  <Title level={3}>ฝึกงานที่นี่ได้อะไรบ้าง</Title>
-                  <Text>
-                    At eripuit signiferumque sea, vel ad mucius molestie, cu
-                    labitur.At eripuit signiferumque sea, vel ad mucius
-                    molestie, cu labitur.At eripuit signiferumque sea, vel ad
-                    mucius molestie, cu labitur.At eripuit signiferumque sea,
-                    vel ad mucius molestie, cu labitur.At eripuit signiferumque
-                    sea, vel ad mucius molestie, cu labitur.At eripuit
-                    signiferumque sea, vel ad mucius molestie, cu labitur.At
-                    eripuit signiferumque sea, vel ad mucius molestie, cu
-                    labitur.At eripuit signiferumque sea, vel ad mucius
-                    molestie, cu labitur.At eripuit signiferumque sea, vel ad
-                    mucius molestie, cu labitur.At eripuit signiferumque sea,
-                    vel ad mucius molestie, cu labitur.At eripuit signiferumque
-                    sea, vel ad mucius molestie, cu labitur.At eripuit
-                    signiferumque sea, vel ad mucius molestie, cu labitur.At
-                    eripuit signiferumque sea, vel ad mucius molestie, cu
-                    labitur.At eripuit signiferumque sea, vel ad mucius
-                    molestie, cu labitur.
-                  </Text>
-                </Col>
-                <Col md={12} className="InternshipSpecification">
-                  <Title level={3}>คุณสมบัติผู้มาฝึกงาน</Title>
-                  <ul>
-                    <li>
-                      <Text>
-                        signiferumque sea, vel ad mucius molestie, cu labitur.At
-                        eripuit signiferumque sea
-                      </Text>
-                    </li>
-                    <li>
-                      <Text>
-                        signiferumque sea, vel ad mucius molestie, cu labitur.At
-                        eripuit signiferumque sea
-                      </Text>
-                    </li>
-                    <li>
-                      <Text>
-                        signiferumque sea, vel ad mucius molestie, cu labitur.At
-                        eripuit signiferumque sea
-                      </Text>
-                    </li>
-                    <li>
-                      <Text>
-                        signiferumque sea, vel ad mucius molestie, cu labitur.At
-                        eripuit signiferumque sea
-                      </Text>
-                    </li>
-                    <li>
-                      <Text>
-                        signiferumque sea, vel ad mucius molestie, cu labitur.At
-                        eripuit signiferumque sea
-                      </Text>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </>
-          )}
+                    {this.state.loadingImage && (
+                      <Skeleton.Image
+                        id="internImageSkeleton"
+                        style={{ width: 350, height: 200, maxWidth: "500px" }}
+                      />
+                    )}
+                  </Col>
+                  <Col md={12} className="InternImageDetail">
+                    <Title level={3} id="InternshipImageTitle">
+                      Est tation latine aliquip id, mea ad tale illud
+                      definitiones. Periculis omittantur necessitatibus eum ad,
+                      pro eripuit minimum comprehensam ne, usu cu stet prompta
+                      reformidans.
+                    </Title>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="InternshipReceive" md={12}>
+                    <Title level={3}>ฝึกงานที่นี่ได้อะไรบ้าง</Title>
+                    <Text>
+                      At eripuit signiferumque sea, vel ad mucius molestie, cu
+                      labitur.At eripuit signiferumque sea, vel ad mucius
+                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
+                      mucius molestie, cu labitur.At eripuit signiferumque sea,
+                      vel ad mucius molestie, cu labitur.At eripuit
+                      signiferumque sea, vel ad mucius molestie, cu labitur.At
+                      eripuit signiferumque sea, vel ad mucius molestie, cu
+                      labitur.At eripuit signiferumque sea, vel ad mucius
+                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
+                      mucius molestie, cu labitur.At eripuit signiferumque sea,
+                      vel ad mucius molestie, cu labitur.At eripuit
+                      signiferumque sea, vel ad mucius molestie, cu labitur.At
+                      eripuit signiferumque sea, vel ad mucius molestie, cu
+                      labitur.At eripuit signiferumque sea, vel ad mucius
+                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
+                      mucius molestie, cu labitur.At eripuit signiferumque sea,
+                      vel ad mucius molestie, cu labitur.
+                    </Text>
+                  </Col>
+                  <Col md={12} className="InternshipSpecification">
+                    <Title level={3}>คุณสมบัติผู้มาฝึกงาน</Title>
+                    <ul>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                    </ul>
+                  </Col>
+                </Row>
+              </>
+            )}
+          </div>
         </div>
 
         {this.state.isLoading ? (

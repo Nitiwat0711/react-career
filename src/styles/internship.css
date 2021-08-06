@@ -4,11 +4,15 @@
 
 .InternshipContent {
   padding-top: 2rem;
-  background-color: #f0f0f0;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.internData {
+  background-color: #f0f0f0;
+  margin: 0;
 }
 
 @media (min-width: 800px) {
@@ -38,5 +42,11 @@
   #InternshipImageTitle {
     font-size: 20px;
     text-align: center;
+  }
+}
+
+@media (min-width: 2000px) {
+  .InternshipContent {
+    width: 75%;
   }
 }

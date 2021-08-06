@@ -72,11 +72,11 @@ const uploadPdfFile = {
   beforeUpload(file) {
     const isPdf = file.type === "application/pdf";
     if (!isPdf) {
-      message.error("You can only upload PDF file!");
+      message.error("กรุณาอัพโหลดไฟล์ PDF เท่านั้น!");
     }
     const isLt2M = file.size / 1024 / 1024 < 2;
     if (!isLt2M) {
-      message.error("file must smaller than 2MB!");
+      message.error("ไฟล์ต้องมีขนาดไม่เกิน 2MB!");
     }
     return isPdf && isLt2M ? true : Upload.LIST_IGNORE;
   },
