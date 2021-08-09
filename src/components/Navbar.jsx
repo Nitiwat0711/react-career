@@ -13,6 +13,7 @@ class Navbar extends Component {
       <nav id="myNav" className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand p-1" to="/">
+            {/* <img src="favicon.png" alt="" style={{ height: "40px" }} /> */}
             Combuy Career
           </Link>
 
