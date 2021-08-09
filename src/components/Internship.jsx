@@ -68,28 +68,41 @@ class Internship extends Component {
                     </Title>
                   </Col>
                 </Row>
-                <Row>
+                <Row style={{ marginTop: "10px" }}>
                   <Col className="InternshipReceive" md={12}>
                     <Title level={3}>ฝึกงานที่นี่ได้อะไรบ้าง</Title>
-                    <Text>
-                      At eripuit signiferumque sea, vel ad mucius molestie, cu
-                      labitur.At eripuit signiferumque sea, vel ad mucius
-                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
-                      mucius molestie, cu labitur.At eripuit signiferumque sea,
-                      vel ad mucius molestie, cu labitur.At eripuit
-                      signiferumque sea, vel ad mucius molestie, cu labitur.At
-                      eripuit signiferumque sea, vel ad mucius molestie, cu
-                      labitur.At eripuit signiferumque sea, vel ad mucius
-                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
-                      mucius molestie, cu labitur.At eripuit signiferumque sea,
-                      vel ad mucius molestie, cu labitur.At eripuit
-                      signiferumque sea, vel ad mucius molestie, cu labitur.At
-                      eripuit signiferumque sea, vel ad mucius molestie, cu
-                      labitur.At eripuit signiferumque sea, vel ad mucius
-                      molestie, cu labitur.At eripuit signiferumque sea, vel ad
-                      mucius molestie, cu labitur.At eripuit signiferumque sea,
-                      vel ad mucius molestie, cu labitur.
-                    </Text>
+                    <ul>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                      <li>
+                        <Text>
+                          signiferumque sea, vel ad mucius molestie, cu
+                          labitur.At eripuit signiferumque sea
+                        </Text>
+                      </li>
+                    </ul>
                   </Col>
                   <Col md={12} className="InternshipSpecification">
                     <Title level={3}>คุณสมบัติผู้มาฝึกงาน</Title>

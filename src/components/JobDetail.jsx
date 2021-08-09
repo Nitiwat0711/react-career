@@ -77,45 +77,65 @@ class JobDetail extends Component {
         ) : (
           <div className="container">
             <div className="jobContent">
-              <div className="highlight">
-                <Title level={3}>Job Highlights</Title>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.state.jobHighlight,
-                  }}
-                ></div>
-              </div>
-              <div className="description">
-                <Title level={3}>Job Descriptions</Title>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.state.jobDescription,
-                  }}
-                ></div>
-              </div>
-              <div className="qualification">
-                <Title level={3}>Qualifications</Title>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: this.state.jobQualification,
-                  }}
-                ></div>
-              </div>
-              <div className="addition">
-                <Title level={3}>Additional Information </Title>
-                <ul>
-                  <li>
-                    <Text strong>Career Level: </Text> {this.state.careerLevel}
-                  </li>
-                  <li>
-                    <Text strong>Years of Experience: </Text>
-                    {this.state.yearOfExperience}
-                  </li>
-                  <li>
-                    <Text strong>Job Type: </Text> {this.state.jobType}
-                  </li>
-                </ul>
-              </div>
+              <section>
+                <div className="highlight">
+                  <Title id="HeaderOfJob1" level={3}>
+                    Job Highlights
+                  </Title>
+                  <div
+                    className="DetailOfJob"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.jobHighlight,
+                    }}
+                  ></div>
+                </div>
+              </section>
+              <section>
+                <div className="description">
+                  <Title id="HeaderOfJob2" level={3}>
+                    Job Descriptions
+                  </Title>
+                  <div
+                    className="DetailOfJob"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.jobDescription,
+                    }}
+                  ></div>
+                </div>
+              </section>
+              <section>
+                <div className="qualification">
+                  <Title id="HeaderOfJob3" level={3}>
+                    Qualifications
+                  </Title>
+                  <div
+                    className="DetailOfJob"
+                    dangerouslySetInnerHTML={{
+                      __html: this.state.jobQualification,
+                    }}
+                  ></div>
+                </div>
+              </section>
+              <section>
+                <div className="addition">
+                  <Title id="HeaderOfJob4" level={3}>
+                    Additional Information
+                  </Title>
+                  <ul className="DetailOfJob">
+                    <li>
+                      <Text strong>Career Level: </Text>{" "}
+                      {this.state.careerLevel}
+                    </li>
+                    <li>
+                      <Text strong>Years of Experience: </Text>
+                      {this.state.yearOfExperience}
+                    </li>
+                    <li>
+                      <Text strong>Job Type: </Text> {this.state.jobType}
+                    </li>
+                  </ul>
+                </div>
+              </section>
               <div
                 className="link"
                 style={{
@@ -125,11 +145,12 @@ class JobDetail extends Component {
               >
                 <Link to={`/apply/${this.state.jobId}#`}>
                   <Button
+                    id="ApplyJobButton"
                     type="primary"
                     size="large"
-                    style={{
-                      width: 180,
-                    }}
+                    // style={{
+                    //   width: 180,
+                    // }}
                   >
                     Apply Now
                   </Button>

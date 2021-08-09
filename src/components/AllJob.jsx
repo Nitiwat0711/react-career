@@ -39,6 +39,7 @@ const headerStyle = {
   background: "#ffffff",
   paddingTop: "10px",
   paddingLeft: "30px",
+  paddingRight: "30px",
 };
 
 const contentDetailStyle = {
@@ -208,50 +209,54 @@ class AllJob extends Component {
               {this.state.jobsList.length === 0 ? (
                 <Skeleton active />
               ) : (
-                <Row align="medium">
-                  <Col span={10}>
-                    <Text id="resultItem">
-                      ค้นพบ : {this.state.jobsList.length} รายการ
-                    </Text>
-                  </Col>
-                  <Col span={6} offset={6} style={{ textAlign: "right" }}>
-                    <Button
-                      id="filterButton"
-                      icon={<FilterOutlined />}
-                      onClick={() => this.setState({ drawerVisible: true })}
-                    >
-                      ตัวกรอง
-                    </Button>
-                    <Drawer
-                      title="ตัวกรอง"
-                      className="drawerFilter"
-                      placement="right"
-                      onClose={() => this.setState({ drawerVisible: false })}
-                      visible={this.state.drawerVisible}
-                      width={"90%"}
-                    >
-                      <Filter
-                        handleFilters={(filters) =>
-                          handleFilters(filters, "continents")
-                        }
-                      />
-                      <div
-                        className="filterOption"
-                        style={{ textAlign: "center" }}
+                <>
+                  <Row align="medium">
+                    <Col span={10}>
+                      <Text id="resultItem">
+                        ค้นพบ : {this.state.jobsList.length} รายการ
+                      </Text>
+                    </Col>
+                    <Col span={8} offset={6} style={{ textAlign: "right" }}>
+                      <Button
+                        id="filterButton"
+                        icon={<FilterOutlined />}
+                        onClick={() => this.setState({ drawerVisible: true })}
                       >
-                        <Button
-                          type="primary"
-                          style={{ width: "80%", marginBottom: 10 }}
-                          onClick={() =>
-                            this.setState({ drawerVisible: false })
-                          }
-                        >
-                          ยืนยัน
-                        </Button>
-                      </div>
-                    </Drawer>
-                  </Col>
-                </Row>
+                        ตัวกรอง
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Row>
+                    <Col>1</Col>
+                    <Col>2</Col>
+                  </Row>
+                  <Drawer
+                    title="ตัวกรอง"
+                    className="drawerFilter"
+                    placement="right"
+                    onClose={() => this.setState({ drawerVisible: false })}
+                    visible={this.state.drawerVisible}
+                    width={"90%"}
+                  >
+                    <Filter
+                      handleFilters={(filters) =>
+                        handleFilters(filters, "continents")
+                      }
+                    />
+                    <div
+                      className="filterOption"
+                      style={{ textAlign: "center" }}
+                    >
+                      <Button
+                        type="primary"
+                        style={{ width: "80%", marginBottom: 10 }}
+                        onClick={() => this.setState({ drawerVisible: false })}
+                      >
+                        ยืนยัน
+                      </Button>
+                    </div>
+                  </Drawer>
+                </>
               )}
             </Header>
             <Content style={contentDetailStyle}>

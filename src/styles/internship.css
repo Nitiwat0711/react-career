@@ -16,6 +16,11 @@
   margin: 0;
 }
 
+#InternshipImageTitle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 @media (min-width: 800px) {
   .InternshipSpecification {
     padding-right: 3rem;

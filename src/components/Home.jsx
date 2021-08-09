@@ -31,7 +31,7 @@ class Home extends Component {
             justify="space-around"
             style={{ paddingTop: "5px" }}
           >
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{
@@ -65,7 +65,7 @@ class Home extends Component {
                 </Skeleton>
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{
@@ -99,7 +99,7 @@ class Home extends Component {
                 )}
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{
@@ -131,7 +131,7 @@ class Home extends Component {
                 )}
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 hoverable
                 style={{
@@ -171,7 +171,7 @@ class Home extends Component {
         <div className="Life">
           <h3 id="WhyTitle">WHY COMBUY?</h3>
           <Row className="LifeDetail" style={{ paddingTop: "5px" }}>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
                 style={{
@@ -205,7 +205,7 @@ class Home extends Component {
                 )}
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
                 style={{
@@ -226,7 +226,7 @@ class Home extends Component {
                 </p>
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
                 style={{
@@ -251,7 +251,7 @@ class Home extends Component {
                 </p>
               </Card>
             </Col>
-            <Col lg={6} md={12} xs={24}>
+            <Col className="cardColumn" lg={6} md={12} xs={24}>
               <Card
                 id="DetailCard"
                 style={{

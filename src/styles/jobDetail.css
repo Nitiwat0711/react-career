@@ -11,6 +11,10 @@
   margin-top: 7rem;
   text-align: center;
 }
+
+#ApplyJobButton {
+  width: 180px;
+}
 @media (max-width: 1300px) {
   #jobDetailTitle {
     font-size: 30px;
@@ -22,5 +26,26 @@
   #jobDetailTitle {
     font-size: 24px;
     line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .DetailOfJob {
+    font-size: 14px;
+  }
+  #HeaderOfJob1 {
+    font-size: 18px;
+  }
+  #HeaderOfJob2 {
+    font-size: 18px;
+  }
+  #HeaderOfJob3 {
+    font-size: 18px;
+  }
+  #HeaderOfJob4 {
+    font-size: 18px;
+  }
+  #ApplyJobButton {
+    font-size: 14px;
+    width: 120px;
   }
 }

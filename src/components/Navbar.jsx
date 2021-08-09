@@ -10,7 +10,7 @@ class Navbar extends Component {
   };
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav id="myNav" className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <Link className="navbar-brand p-1" to="/">
             Combuy Career
@@ -26,7 +26,11 @@ class Navbar extends Component {
             onClick={() => this.setState({ drawerVisible: true })}
           >
             <MenuOutlined
-              style={{ display: "inline-block", verticalAlign: "middle" }}
+              style={{
+                display: "inline-block",
+                verticalAlign: "text-top",
+                marginTop: "2px",
+              }}
             />
           </Button>
 
