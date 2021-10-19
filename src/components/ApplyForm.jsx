@@ -243,6 +243,7 @@ const ApplyForm = (props) => {
               max="999999"
               step="1"
               disabled={disabledInput}
+              inputMode="numeric"
             />
           </Form.Item>
           <Form.Item
