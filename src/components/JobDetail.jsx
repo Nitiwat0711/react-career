@@ -124,14 +124,15 @@ class JobDetail extends Component {
                   <ul className="DetailOfJob">
                     <li>
                       <Text strong>Career Level: </Text>{" "}
-                      {this.state.careerLevel}
+                      {this.state.careerLevel === 1 ? "Entry" : "Middle"}
                     </li>
                     <li>
                       <Text strong>Years of Experience: </Text>
                       {this.state.yearOfExperience}
                     </li>
                     <li>
-                      <Text strong>Job Type: </Text> {this.state.jobType}
+                      <Text strong>Job Type: </Text>{" "}
+                      {this.state.jobType === 1 ? "Full Time" : "Part Time"}
                     </li>
                   </ul>
                 </div>
